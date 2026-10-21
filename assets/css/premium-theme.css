@@ -1100,9 +1100,9 @@ header.style-1 {
   flex-shrink: 0 !important;
 }
 
-/* Hotline Pill */
+/* Hotline Pill (Desktop only >= 992px; hidden on mobile <= 991px to prevent overflow) */
 .header-hotline {
-  display: flex !important;
+  display: none !important;
   align-items: center !important;
   gap: 10px !important;
   padding: 6px 14px !important;
@@ -1111,6 +1111,12 @@ header.style-1 {
   border-radius: 30px !important;
   text-decoration: none !important;
   transition: all 0.3s ease !important;
+}
+
+@media (min-width: 992px) {
+  .header-hotline {
+    display: flex !important;
+  }
 }
 
 .header-hotline:hover {
@@ -3484,3 +3490,164 @@ button.search-submit-btn:hover,
   }
 }
 
+
+
+/* ==========================================================================
+   GLOBAL MOBILE VIEWPORT & TYPOGRAPHY PERFECTION (ZERO HORIZONTAL OVERFLOW)
+   ========================================================================== */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.properties-grid {
+  background-color: transparent !important;
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+}
+
+@media (max-width: 991px) {
+  .custom-premium-header,
+  header.style-1,
+  .header-area {
+    max-width: 100vw !important;
+    overflow-x: clip !important;
+    width: 100% !important;
+  }
+
+  .header-inner {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .header-hotline {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .property-container {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 16px 14px 24px !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .property-container p.gradient-heading,
+  p.gradient-heading,
+  .gradient-heading {
+    font-size: 26px !important;
+    height: auto !important;
+    min-height: auto !important;
+    line-height: 1.3 !important;
+    margin-top: 10px !important;
+    margin-bottom: 12px !important;
+    display: block !important;
+    word-break: break-word !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  .content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-inline: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .content .text-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    text-align: left !important;
+    color: #404040 !important;
+    margin-bottom: 16px !important;
+  }
+
+  .properties-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    padding: 8px 0 20px 0 !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+    box-sizing: border-box !important;
+  }
+
+  .property-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 14px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .property-images img {
+    height: 210px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+  }
+
+  .property-card h2 {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    margin-top: 12px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .property-info-wrapper {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    align-items: center !important;
+    margin-top: 8px !important;
+  }
+
+  .details-link {
+    margin-top: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    height: 40px !important;
+  }
+
+  .home1-team-section {
+    padding-top: 40px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .single-team-card .team-img img {
+    height: 280px !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+    width: 100% !important;
+  }
+}
