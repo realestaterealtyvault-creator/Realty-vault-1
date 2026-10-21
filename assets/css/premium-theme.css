@@ -3651,3 +3651,21 @@ html, body {
     width: 100% !important;
   }
 }
+
+/* Ensure team and gallery images are high-res, crisp, and never stretched across all devices */
+.home1-team-section .single-team-card .team-img,
+.single-team-card .team-img {
+  width: 100% !important;
+  overflow: hidden !important;
+  border-radius: 12px !important;
+}
+
+.home1-team-section .single-team-card .team-img img,
+.single-team-card .team-img img {
+  width: 100% !important;
+  height: 280px !important;
+  object-fit: cover !important;
+  object-position: top center !important;
+  border-radius: 12px !important;
+  display: block !important;
+}
