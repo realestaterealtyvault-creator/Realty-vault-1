@@ -1,0 +1,1899 @@
+/* fonts */
+@font-face {
+    font-family: "popins";
+    font-display: swap;
+    src: url("../fonts/popins/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "popins_bold";
+    font-display: swap;
+    src: url("../fonts/popins/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "NovaSquare";
+    font-display: swap;
+    src: url("../fonts/Nova/NovaSquare-Regular.ttf");
+}
+
+:root {
+    --black: #272727;
+    /* --darkblue: #38787a; */
+    --darkblue: #02547D;
+    /* --darkblue1: #245f60; */
+    --darkblue1: #02547D;
+    --lightblue: #f1f9f9;
+    --yellow: #f8bc03;
+    --white: #fff;
+    --slaty: #C8935F;
+    --slaty_1: #565249;
+    --transition: all 0.4s ease-in-out;
+    --shadow: 0px 4px 63px 0px rgba(15, 28, 51, 0.10);
+    --shadow_1: 0 10px 20px rgb(24 19 19 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    counter-reset: section;
+}
+
+figure {
+    margin: 0;
+}
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: var(--black) #ffffff;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--black);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--darkblue);
+    border-radius: 2px;
+    border: 5px solid transparent;
+}
+
+/*default Css Start Here*/
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+    margin: 0px;
+    padding: 0;
+}
+
+* {
+    text-decoration: none;
+    outline: none;
+    border: 0;
+    font-family: "popins";
+    list-style: none;
+    letter-spacing: 0.4px;
+}
+
+button:focus {
+    outline: 0;
+}
+
+a:hover {
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/*default Css End Here*/
+/* common classes */
+.NovaSquareFont {
+    font-family: "NovaSquare";
+}
+
+.popinsBoldFont {
+    font-family: "popins_bold";
+}
+
+.appbtn {
+    padding: 15px 20px;
+    color: var(--white);
+    font-weight: 600;
+    display: inline-block;
+    font-size: 17px;
+    border-radius: 15px 0;
+    transition: var(--transition);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.appbtn:hover {
+    background: var(--darkblue1);
+}
+
+/* .gradient{background-image: linear-gradient(0deg,  #ffad01 0%, #fad201 100%);} */
+.gradient {
+    background-color: #1b598a;
+}
+
+.gradient1 {
+    background-color: #fff;
+}
+
+.ellipstext {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.overlay.active {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    left: 0;
+    top: 0;
+    opacity: 70%;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+}
+
+
+/* checkbox-section */
+.checkbox-section {
+    gap: 0 5px;
+}
+
+.checkbox-section input {
+    position: relative;
+    top: 3px;
+}
+
+.checkbox-section p {
+    animation: textColor 1.5s linear infinite;
+}
+
+.container {
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+/*Navbar Codes Start From Here*/
+/* .AppHeader{} */
+.AppHeader {
+    background: var(--black);
+    transition: var(--transition);
+}
+
+.HeaderFixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9;
+}
+
+.logodiv {
+    z-index: 1;
+    padding: 23.5px 20px;
+}
+
+.logo .logoimg {
+    width: 256px;
+}
+
+.AppNavbar .navlinks {
+    font-size: 16px;
+    color: var(--white);
+    display: block;
+    padding: 30px 25px;
+    transition: all 0.2s ease;
+    font-family: "popins_bold";
+    position: relative;
+}
+
+.AppNavbar .navlinks::after {
+    position: absolute;
+    content: '';
+    bottom: 15px;
+    background: linear-gradient(180deg, #f9c629d1, #2d3138ed);
+    height: 4px;
+    width: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: var(--transition);
+}
+
+.AppNavbar .navlinks.active,
+.AppNavbar a:hover {
+    color: var(--yellow);
+}
+
+.AppNavbar .navlinks.active::after,
+.AppNavbar a:hover::after {
+    width: 70%;
+}
+
+.headrConNo {
+    color: var(--white);
+    gap: 0 15px;
+    padding: 12px 25px;
+}
+
+.headrConNo .texthelp {
+    font-size: 18px;
+    color: var(--white);
+}
+
+.headrConNo .text {
+    font-size: 23px;
+    color: var(--white);
+}
+
+.headrConNo .callsvg {
+    animation: rotateSvg 2s infinite;
+    width: 32px;
+}
+
+/*Navbar Codes End From Here*/
+
+/*Slider And From Codes Start From Here*/
+.bannerSection {
+    position: relative;
+    z-index: 2;
+}
+
+.bannerSection::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: #2d313847;
+    z-index: 1;
+}
+
+.bannerSection .carousel-inner .sliderimg {
+    aspect-ratio: 21/9.7;
+    object-fit: cover;
+    animation: bannerImage 8s ease infinite;
+}
+
+.bannerSection .carousel-indicators {
+    left: 0;
+    width: fit-content;
+    bottom: 0;
+    margin-left: 25px;
+}
+
+.bannerSection .carousel-indicators li {
+    cursor: pointer;
+    height: 8px;
+    width: 50px;
+    border-radius: 2px;
+}
+
+.carousel-indicators .active {
+    background: var(--yellow);
+}
+
+.bannercontentdiv {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 2;
+    background: var(--white);
+    width: fit-content;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.bannercontentdiv .projectname {
+    font-size: 45px;
+    color: var(--black);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.bannercontentdiv .projlocation {
+    font-size: 16px;
+    color: var(--black);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.bannercontentdiv .typodiv {
+    font-size: 25px;
+    width: fit-content;
+    padding: 5px 15px;
+    border-radius: 15px 0;
+}
+
+.bannercontentdiv .keyhightlight {
+    margin: 30px 0;
+}
+
+.bannercontentdiv .keyhightlight li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.bannercontentdiv .keyhightlight li img {
+    width: 22px;
+}
+
+.bannercontentdiv .startingprice {
+    padding: 15px;
+    border-radius: 20px 0;
+}
+
+.bannercontentdiv .pricetext {
+    font-size: 50px;
+    transform: scale(0.9);
+    animation: zoomin-out1 2s infinite;
+    color: var(--white);
+}
+
+.bannercontentdiv .textstart {
+    font-size: 22px;
+}
+
+.bannerForm {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+    padding: 23px;
+    width: 22%;
+    border-radius: 15px 0 0 0;
+}
+
+.bannerForm .heading {
+    font-size: 25px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 10px 0;
+    width: 100%;
+    gap: 0 8px;
+    color: var(--white);
+}
+
+.bannerForm .heading img {
+    width: 40px;
+    animation: zoomin-out 2s infinite;
+    width: 31px;
+}
+
+.bannerForm .flexdiv {
+    flex-wrap: wrap;
+}
+
+.bannerForm .flexdiv .inputbox {
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+.bannerForm .flexdiv input {
+    padding: 15px;
+    background: var(--white);
+    border-radius: 15px 0;
+}
+
+.bannerForm .appbtn {
+    width: 100%;
+    margin: 0 0 0 auto;
+}
+
+/*Slider And From Codes End From Here*/
+
+
+/* .commonBox */
+.commonBox {
+    padding: 130px 0;
+    position: relative;
+    z-index: 1;
+    background-image: linear-gradient(-45deg, #f7f7f7, #f7f7f7 50%, #fff 50%, #fff);
+    background-size: 5px 5px;
+}
+
+.commonBox .flexdiv {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.commonBox .contentbox,
+.commonBox .imgbox {
+    width: 50%;
+    height: 100%;
+}
+
+.commonBox .imgbox {
+    position: absolute;
+    right: 0;
+}
+
+.commonBox .contentbox.paddingR {
+    padding-right: 57px;
+}
+
+.commonBox .contentbox.paddingL {
+    padding-left: 75px;
+}
+
+.commonBox .imgbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.commonBox article {
+    margin-bottom: 25px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.commonBox .appbtn {
+    width: 43%;
+}
+
+.commonBox .appbtn:hover img {
+    margin-right: -15px;
+    transition: var(--transition);
+}
+
+
+/* .commonBox1 */
+/* .commonBox1{padding: 0 0 100px 0;} */
+.commonBox.commonBox1 .imgbox {
+    right: inherit;
+    left: 0;
+}
+
+.commonBox.commonBox1 .contentbox {
+    margin: 0 auto;
+    margin-right: 0;
+}
+
+/* .commonheading */
+.commonheading .address {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+    display: inline-block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.commonheading .projectname {
+    font-size: 45px;
+    text-transform: uppercase;
+    color: var(--black);
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 41px;
+}
+
+.commonheading .projectname::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -32px;
+    background: url(../images/icons/line.png) no-repeat;
+    height: 25px;
+    width: 100%;
+    filter: hue-rotate(111deg);
+}
+
+
+/*Highlights Codes Start From Here*/
+.highlightlist li {
+    padding: 8px 0;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+.highlightlist li span {
+    display: inline-block;
+    height: 55px;
+    width: 55px;
+    min-width: 55px;
+    line-height: 55px;
+    font-family: "NovaSquare";
+    font-size: 27px;
+    font-weight: inherit;
+    text-align: center;
+    border-radius: 8px 0;
+    margin-right: 15px;
+    color: var(--white);
+}
+
+/*Highlights Codes End From Here*/
+
+/*Price List Codes Start From Here*/
+
+.pricelist-container {
+    padding: 100px 0;
+    position: relative;
+    background-image: url(../images/icons/pricelist-bg.png);
+    background-size: contain;
+    margin-top: 45px;
+}
+
+.pricelist-container .priceboxesdiv {
+    flex-wrap: wrap;
+    gap: 59px 0;
+}
+
+.pricelist-container .commonheading {
+    margin-bottom: 55px;
+}
+
+.pricelist-container .price_list_box {
+    background: var(--black) url(../images/icons/row-bgimage-7.png);
+    color: var(--white);
+    padding: 35px;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pricelist-container .property-type {
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    border-bottom: 1px solid var(--white);
+}
+
+.pricelist-container .pricelist_heading {
+    font-size: 45px;
+    font-family: "NovaSquare";
+}
+
+.pricelist-container .pricetext {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+}
+
+.pricelist-container .pricetext span,
+.pricelist-container .pricetext h4,
+.pricelist-container .sizediv,
+.pricelist-container .sizediv span {
+    font-size: 21px;
+}
+
+.pricelist-container .sizediv {
+    padding: 15px 0;
+    margin-bottom: 25px;
+}
+
+/*Price List Codes End From Here*/
+
+
+
+/*Floor And Master Plan Codes Start From Here*/
+.floorplan-container {
+    padding: 100px 0 100px 0;
+    position: relative;
+}
+
+.floorplan-container .commonheading {
+    width: 31%;
+}
+
+.floorplan-container .desc {
+    margin-bottom: 25px;
+}
+
+.floorplan-container .inner-div {
+    justify-content: space-between;
+    width: 64%;
+    gap: 0 35px;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+}
+
+.floorplan-container .inner-div::-webkit-scrollbar {
+    height: 20px;
+}
+
+.floorplan-container .inner-div::-webkit-scrollbar-thumb {
+    background: var(--darkblue1) url(../images/gif/next.gif) no-repeat 99%;
+    background-size: 45px;
+}
+
+.floorplan-container .plansbox {
+    padding: 25px;
+    background: #1b598a;
+    flex: 0 0 50%;
+    border-radius: 15px 0 0;
+    animation: scrollImages 10s linear infinite;
+}
+
+.floorplan-container .plan_name {
+    width: fit-content;
+    /* background: var(--darkblue); */
+    color: #fff;
+    font-size: 26px;
+    padding: 8px 15px;
+    border-radius: 15px 0;
+}
+
+.floorplan-container .aprtementtype {
+    font-size: 45px;
+    color: #fff;
+}
+
+/*Floor And Master Plan Codes End From Here*/
+
+/*Amenities Codes Start From Here*/
+.amenities-container {
+    padding: 100px 0;
+    background: var(--lightblue) url(../images/icons/vertical-grid-line.png);
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e3e0e0;
+}
+
+.amenities-container .container {
+    position: relative;
+}
+
+.amenities-container .leftside {
+    width: 44%;
+}
+
+.amenities-container .container .desc {
+    margin-bottom: 25px;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+.amenities-container .rightsider {
+    width: 53%;
+    gap: 25px;
+    position: sticky;
+    top: 0;
+}
+
+.amenities-container .rightsider .boxes {
+    padding: 25px;
+    margin-bottom: 44px;
+}
+
+.amenities-container .am_name {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.amenities-container .icondiv img {
+    /* height: 130px; */
+    /* width: 350px; */
+}
+
+/*Amenities Codes End From Here*/
+
+/*Location Codes Start From Here*/
+.location-container {
+    /* background: var(--darkblue) url(../images/icons/icon-bg.png) no-repeat; */
+    background: var(--darkblue) url(../images/icons/icon-bg.png) no-repeat;
+    background-size: cover;
+    color: var(--white);
+    /* height: 635px; */
+    padding: 79px 0;
+}
+
+.location-container .commonheading {
+    width: 37%;
+}
+
+.location-container .projectname {
+    font-size: 35px;
+}
+
+.location-container .imgdiv {
+    width: 52%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.location-container .imgdiv img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.location-container .listflex {
+    color: var(--darkblue1);
+    margin-top: 50px;
+}
+
+.location-container .listflex .listflex_inner {
+    gap: 0 15px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 18px;
+    position: relative;
+    padding: 10px;
+    background: var(--lightblue);
+    border-radius: 15px 0;
+}
+
+.location-container .listflex .topdiv {
+    margin-bottom: 7px;
+    gap: 0 15px;
+}
+
+.location-container .listflex img {
+    height: 43px;
+}
+
+.location-container .bigtext {
+    font-size: 29px;
+    color: var(--darkblue);
+}
+
+.location-container .text {
+    font-size: 16px;
+}
+
+.location-container .commonheading .projectname::after {
+    filter: hue-rotate(345deg);
+}
+
+/*Location Codes End From Here*/
+
+
+/*Gallery Codes Start From Here*/
+.gallery-container {
+    padding: 54px 0 70px 0;
+    background: var(--lightblue);
+    background-image: linear-gradient(-45deg, #ffffff, #f9f9f9 50%, #fff 50%, #fff);
+    background-size: 5px 4px;
+}
+
+.gallery-container .container {
+    max-width: 85%;
+}
+
+.gallery-container .commonheading {
+    margin-bottom: 72px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 15px 0;
+}
+
+.gallery-container .rightimges img {
+    height: 336px;
+}
+
+/*Gallery Codes End From Here*/
+
+
+/* contact - Form section */
+.contact-container {
+    background: var(--black) url(../images/icons/bg-pattern-pricelist-2.png) no-repeat;
+    background-size: cover;
+    color: var(--white);
+    padding: 100px 0;
+}
+
+.contact-container .formdiv {
+    padding: 30px 42px;
+    border: 1px solid currentColor;
+    border-radius: 15px 0;
+}
+
+.contact-container .formdiv .heading {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.contact-container .formdiv p {
+    margin-bottom: 22px;
+}
+
+.contact-container .formdiv .flexfields {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contact-container .formdiv .flexfields input {
+    padding: 15px 10px 15px 25px;
+    margin-bottom: 31px;
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    border-radius: 11px 0;
+}
+
+.contact-container .formdiv input::placeholder {
+    color: var(--white);
+}
+
+.contact-container .formdiv .col-md-6 {
+    flex: 0 0 48%;
+    max-width: 48%;
+    padding: 0;
+}
+
+.contact-container .appbtn {
+    width: 47%;
+    font-size: 15px;
+}
+
+.contact-container .contentdiv {
+    width: 50%;
+}
+
+.contact-container .projectname {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.contact-container .projlocation {
+    font-size: 25px;
+    display: inline-block;
+    margin-bottom: 18px;
+}
+
+.contact-container .contentdiv p {
+    margin-bottom: 18px;
+    text-align: justify;
+    letter-spacing: 0.7px;
+}
+
+/*End contact - Form section */
+
+
+/* Start .sitefooter */
+.sitefooter {
+    background: var(--darkblue1) url(../images/icons/pattern1.png);
+    padding: 70px 0;
+    color: var(--white);
+}
+
+.sitefooter .pera {
+    margin-bottom: 10px;
+}
+
+.sitefooter .appbtn {
+    padding: 8px 15px;
+    border-radius: 8px 0;
+    font-size: 14px;
+    width: fit-content;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.sitefooter .rera_no {
+    margin-bottom: 8px;
+}
+
+.sitefooter .gtfdiv {
+    gap: 0 15px;
+}
+
+.sitefooter .gtfdiv a {
+    color: var(--yellow);
+}
+
+/* End .sitefooter */
+
+
+/* mobile-section-footer */
+.mobile-section-footer {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: var(--black);
+    color: var(--white);
+    padding: 5px 0;
+}
+
+.mobile-section-footer a {
+    display: block;
+    font-size: 14px;
+    padding: 6px 8px;
+    color: currentColor;
+    border: 1px solid currentColor;
+    border-radius: 5px 0;
+    width: 30.5%;
+    text-align: center;
+}
+
+/* .mobile-section-footer a:last-child{ border-right: 0;} */
+
+
+/* #customModal */
+.modal .modal-content {
+    padding: 25px;
+}
+
+.modal-dialog .modal-head {
+    font-size: 26px;
+}
+
+.modal .form-control {
+    padding: 15px;
+}
+
+.modal .flexdiv {
+    margin-bottom: 6px;
+}
+
+.modal .modal-para {
+    padding-bottom: 15px;
+}
+
+.modal .appbtn {
+    padding: 12px;
+    border-radius: 5px 0;
+}
+
+.with-caption.image-link.floor-plan1 img {
+
+    /* height: 100%; */
+
+    /* width: 100%; */
+
+    /* object-fit: cover; */
+}
+
+.qr-code-img {
+    margin: 0px auto;
+    display: block;
+    margin-top: 15px;
+}
+
+
+.destop-show {
+    display: block;
+}
+
+.mobile-show {
+    display: none;
+}
+
+
+.patch-images {
+    position: absolute;
+    bottom: 15%;
+    left: 45%;
+    width: 15%;
+    z-index: 99;
+}
+
+@media(max-width: 1600px) {
+    .AppNavbar .navlinks {
+        padding: 30px 10px;
+    }
+
+    .headrConNo {
+        padding: 12px 17px;
+    }
+
+    .bannercontentdiv .projectname {
+        font-size: 41px;
+    }
+}
+
+@media(max-width: 1480px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .logodiv {
+        padding: 14px 20px;
+    }
+
+    .headrConNo {
+        padding: 7px 17px;
+    }
+
+    .AppNavbar .navlinks {
+        font-size: 15px;
+        padding: 23px 8px;
+    }
+
+    .AppHeader .logo {
+        padding: 2px;
+    }
+
+    .logo .logoimg {
+        width: 204px;
+    }
+
+    .bannerSection .carousel-inner .sliderimg {
+        aspect-ratio: 21/8.7;
+    }
+
+    .bannercontentdiv {
+        padding: 20px;
+    }
+
+    .bannercontentdiv .projlocation {
+        margin-bottom: 6px;
+    }
+
+    .bannercontentdiv .projectname {
+        margin-bottom: 11px;
+        font-size: 20px;
+    }
+
+    .bannercontentdiv .typodiv {
+        font-size: 17px;
+    }
+
+    .bannercontentdiv .pricetext {
+        font-size: 37px;
+    }
+
+    .bannercontentdiv .keyhightlight {
+        margin: 18px 0;
+    }
+
+    .bannercontentdiv .keyhightlight li {
+        font-size: 16px;
+    }
+
+    .bannercontentdiv .keyhightlight li img {
+        width: 18px;
+    }
+
+    .bannerForm .heading {
+        font-size: 17px;
+    }
+
+    .bannerForm .heading img {
+        width: 25px;
+    }
+
+    .commonheading .projectname {
+        font-size: 30px;
+    }
+
+    .commonBox .flexdiv {
+        max-width: 90%;
+    }
+
+    .commonBox article {
+        margin-bottom: 16px;
+        font-size: 15px;
+    }
+
+    .appbtn {
+        font-size: 15px;
+        padding: 14px 16px;
+        border-radius: 5px 0;
+    }
+
+    .commonBox {
+        padding: 56px 0;
+    }
+
+    .highlightlist li span {
+        height: 43px;
+        width: 43px;
+        font-size: 20px;
+        line-height: 47px;
+    }
+
+    .highlightlist li {
+        font-size: 15px;
+    }
+
+    .pricelist-container {
+        padding: 56px 0;
+        padding-top: inherit;
+    }
+
+    .pricelist-container .property-type {
+        font-size: 18px;
+    }
+
+    .pricelist-container .pricelist_heading {
+        font-size: 29px;
+    }
+
+    .pricelist-container .pricetext span,
+    .pricelist-container .pricetext h4,
+    .pricelist-container .sizediv,
+    .pricelist-container .sizediv span {
+        font-size: 16px;
+    }
+
+    .amenities-container {
+        padding: 10px 0;
+    }
+
+    .amenities-container .container .desc {
+        letter-spacing: 1px;
+        font-size: 14px;
+    }
+
+    .amenities-container .rightsider .boxes {
+        padding: 0;
+    }
+
+    .amenities-container .am_name {
+        font-size: 15px;
+    }
+
+    .amenities-container .icondiv img {
+        height: 104px;
+        width: 91px;
+    }
+
+    .floorplan-container .aprtementtype {
+        margin-top: 10px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .floorplan-container .desc {
+        margin-bottom: 14px;
+        font-size: 15px;
+    }
+
+    .floorplan-container .plan_name {
+        font-size: 21px;
+        padding: 4px 10px;
+        border-radius: 8px 0;
+    }
+
+    .gallery-container .container {
+        max-width: 90%;
+    }
+
+    .gallery-container .commonheading {
+        margin-bottom: 47px;
+    }
+
+    .gallery-container img {
+        height: 506px;
+    }
+
+    .gallery-container .rightimges img {
+        height: 237px;
+    }
+
+    .contact-container .appbtn {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 1366px) {
+    .logo .logoimg {
+        width: 125px;
+    }
+
+    .headrConNo .text {
+        font-size: 20px;
+    }
+
+    .headrConNo .callsvg {
+        width: 24px;
+    }
+
+    .bannerForm {
+        padding: 8px;
+        border-radius: 8px 0 0 0;
+    }
+
+    .bannerForm .flexdiv input {
+        padding: 10px;
+        border-radius: 5px 0;
+    }
+
+    .bannerForm .heading {
+        margin-bottom: 14px;
+        border-radius: 5px 0;
+        padding: 12px 15px;
+    }
+
+    .location-container .commonheading {
+        margin-top: 0;
+    }
+
+    .location-container .listflex {
+        gap: 26px;
+    }
+
+    .location-container .bigtext {
+        font-size: 28px;
+    }
+
+    .contact-container {
+        padding: 58px 0;
+    }
+
+    .contact-container .contentdiv {
+        width: 54%;
+    }
+
+    .contact-container .formdiv .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .contact-container .formdiv .heading {
+        font-size: 25px;
+        margin-bottom: 6px;
+    }
+
+    .contact-container .formdiv p {
+        margin-bottom: 10px;
+    }
+
+    .contact-container .appbtn {
+        width: 100%;
+    }
+
+    .contact-container .formdiv .flexfields input {
+        padding: 7px 10px 7px 10px;
+        margin-bottom: 17px;
+        border-radius: 6px 0;
+    }
+
+    .contact-container .projlocation {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .contact-container .projectname {
+        font-size: 25px;
+    }
+
+    .contact-container .contentdiv p {
+        margin-bottom: 17px;
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 1280px) {}
+
+@media(max-width: 991px) {}
+
+/* if need chnage 768 to 767 */
+@media(max-width: 767px) {
+
+
+
+    .projectname.mobile-sec {
+        padding-left: 15px;
+    }
+
+    .patch-images {
+        position: absolute;
+        bottom: 0px;
+        left: 5%;
+        width: 25%;
+        z-index: 99;
+        top: 25%;
+    }
+
+    .destop-show {
+        display: none;
+    }
+
+    .mobile-show {
+        display: block;
+    }
+
+    .AppHeader {
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: var(--darkblue);
+        z-index: 9;
+    }
+
+    #bannerSliderControl {
+        padding-top: 120px;
+    }
+
+    .location-container .text {
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    .container {
+        max-width: 98%;
+    }
+
+    /* .flex-wrap-mb */
+    .flex-wrap-mb {
+        flex-wrap: wrap;
+    }
+
+    .w-100-mb {
+        width: 100% !important;
+    }
+
+    /* .appbtn */
+    .appbtn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    /* .commonheading */
+    .commonheading .projectname {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .commonheading .address {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .HeaderFixed {
+        top: 0px;
+    }
+
+    .headerflexdiv {
+        display: block !important;
+    }
+
+    .logodiv {
+        padding: 8px 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #fff;
+    }
+
+    .AppHeader .logo {
+        padding: 0;
+    }
+
+    .logo .logoimg {
+        width: 210px;
+    }
+
+    .AppNavbar {
+        position: fixed;
+        width: 80%;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        right: 0;
+        z-index: 9;
+        background: #fff;
+        display: block !important;
+        transition: var(--transition);
+    }
+
+    .AppNavbar.active {
+        left: 0;
+    }
+
+    .AppNavbar .navlinks {
+        font-size: 14px;
+        padding: 10px 10px;
+        color: var(--black);
+        border-bottom: 1px solid var(--black);
+    }
+
+    .headrConDiv {
+        position: relative;
+    }
+
+    .headrConNo .callsvg {
+        width: 18px;
+    }
+
+    .headrConNo .texthelp {
+        font-size: 14px;
+    }
+
+    .headrConNo .text {
+        font-size: 16px;
+    }
+
+    .menuIcoin {
+        display: block !important;
+        position: absolute;
+        right: 15px;
+        padding-top: 15px;
+        top: 50%;
+        transform: translate(10px, -49%);
+    }
+
+    .menuIcoin img {
+        filter: invert(1);
+    }
+
+    .AppNavbar .navlinks.active,
+    .AppNavbar a:hover {
+        border-bottom: 1px solid var(--yellow);
+    }
+
+    .AppNavbar .navlinks.active::after,
+    .AppNavbar a:hover::after {
+        display: none;
+    }
+
+    .bannerSection::after,
+    .bannercontentdiv,
+    .bannerForm {
+        position: unset;
+    }
+
+    .bannerSection .carousel-inner .sliderimg {
+        aspect-ratio: 18/12.7;
+    }
+
+    /* .bannercontentdiv */
+    .bannercontentdiv {
+        transform: translate(0, 0);
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .bannercontentdiv .projlocation {
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .bannercontentdiv .projectname {
+        margin-bottom: 8px;
+        font-size: 27px;
+    }
+
+    .bannercontentdiv .typodiv {
+        font-size: 17px;
+        border-radius: 5px 0;
+        text-align: CENTER;
+        width: 100%;
+    }
+
+    .bannercontentdiv .keyhightlight {
+        margin: 12px 0;
+    }
+
+    .bannercontentdiv .keyhightlight li {
+        font-size: 14px;
+        margin-bottom: 7px;
+    }
+
+    /* .bannerForm */
+    .bannerForm {
+        width: 100%;
+        background: var(--black);
+    }
+
+    .bannerForm .heading {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    /* .commonBox */
+    .commonBox {
+        padding: 25px 0;
+    }
+
+    .commonBox article {
+        font-size: 15px;
+        line-height: 26px;
+        text-align: justify;
+    }
+
+    .commonBox .imgbox {
+        position: unset;
+        margin-top: 25px;
+    }
+
+    .commonBox .contentbox.paddingR {
+        padding-right: 0;
+    }
+
+    .commonBox .contentbox.paddingL {
+        padding-left: 0;
+    }
+
+    .commonBox .imgbox img {
+        height: 217px;
+        object-fit: cover;
+    }
+
+    .commonBox.commonBox1 {
+        padding-top: 10px;
+    }
+
+    .commonBox.commonBox1 .flexdiv {
+        flex-direction: column-reverse;
+    }
+
+    .commonBox .appbtn {
+        border-radius: 5px 0 !important;
+    }
+
+    .highlightlist li {
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    .highlightlist li span {
+        height: 38px;
+        width: 38px;
+        font-size: 17px;
+        line-height: 38px;
+        min-width: 38px;
+        border-radius: 3px 0;
+    }
+
+    /* .pricelist-container */
+    .pricelist-container {
+        padding: 20px 0;
+        margin-top: 0;
+    }
+
+    .pricelist-container .commonheading {
+        margin-bottom: 35px;
+    }
+
+    .pricelist-container .col-sm-12 {
+        padding: 0;
+    }
+
+    .pricelist-container .priceboxesdiv {
+        gap: 25px 0;
+    }
+
+    .pricelist-container .pricelist_heading {
+        font-size: 22px;
+    }
+
+    .pricelist-container .price_list_box {
+        padding: 15px;
+    }
+
+    /* .amenities-container */
+    .amenities-container {
+        padding: 25px 0;
+    }
+
+    .amenities-container .container .desc {
+        letter-spacing: 0.3px;
+        text-align: start;
+        line-height: 26px;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .amenities-container .leftside {
+        margin-bottom: 25px;
+    }
+
+    .amenities-container .rightsider {
+        display: block !important;
+    }
+
+    .amenities-container .boxesleft,
+    .amenities-container .boxescenter,
+    .amenities-container .boxesright {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: unset;
+        padding: 5px 0px;
+    }
+
+    .amenities-container .rightsider .boxes {
+        margin-bottom: 10px;
+        width: 48%;
+    }
+
+    .amenities-container .icondiv img {
+        height: 58px;
+        width: 61px;
+    }
+
+    /* floorplan-container */
+    .floorplan-container {
+        padding: 28px 0 34px 0;
+    }
+
+    .floorplan-container .container {
+        flex-direction: column-reverse;
+    }
+
+    .floorplan-container .inner-div {
+        display: block !important;
+    }
+
+    .floorplan-container .plansbox {
+        animation: unset;
+        border-radius: 5px 0;
+        margin-bottom: 25px;
+    }
+
+    .floorplan-container .commonheading {
+        margin-bottom: 25px;
+    }
+
+    .floorplan-container .desc {
+        font-size: 15px;
+        text-align: left;
+        line-height: 26px;
+    }
+
+    .floorplan-container .plan_name {
+        font-size: 18px;
+    }
+
+    .floorplan-container .aprtementtype {
+        font-size: 18px;
+    }
+
+    /* .location-container */
+    .location-container {
+        padding: 28px 0;
+    }
+
+    .location-container .imgdiv {
+        position: unset;
+    }
+
+    .location-container .listflex .listflex_inner {
+        text-align: left;
+        gap: 0 7px;
+        border-radius: 6px;
+    }
+
+    .location-container .bigtext {
+        font-size: 22px;
+    }
+
+    /* .gallery-container */
+    .gallery-container {
+        padding: 27px 0 0px 0;
+    }
+
+    .gallery-container .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .gallery-container img,
+    .gallery-container .rightimges img {
+        height: auto;
+        border-radius: 5px 0;
+    }
+
+    .gallery-container .leftimg,
+    .gallery-container .rightimges,
+    .gallery-container .rightimg {
+        margin-bottom: 25px;
+    }
+
+    /* .contact-container */
+    .contact-container {
+        padding: 35px 0;
+    }
+
+    .contact-container .formdiv {
+        padding: 15px;
+        border-radius: 5px 0;
+        margin-bottom: 25px;
+    }
+
+    .contact-container .formdiv .heading {
+        font-size: 20px;
+    }
+
+    .contact-container .formdiv p {
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .contact-container .formdiv .flexfields input {
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .contact-container .projectname {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .contact-container .projlocation {
+        margin-bottom: 8px;
+        font-size: 17px;
+    }
+
+    .contact-container .contentdiv p {
+        margin-bottom: 10px;
+        font-size: 14px;
+        text-align: left;
+        letter-spacing: 0.9px;
+        line-height: 22px;
+        text-align: justify;
+    }
+
+    /* .sitefooter */
+    .sitefooter {
+        padding: 20px 0 50px 0;
+    }
+
+    .sitefooter .pera {
+        font-size: 14px;
+        text-align: left;
+        text-align: justify;
+    }
+
+    .sitefooter .gtfdiv {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    /* .mobile-section-footer */
+    .mobile-section-footer {
+        display: flex;
+        display: flex;
+        gap: 0 5px;
+        justify-content: space-around;
+    }
+
+    /* .modal */
+    .modal.modal1.show .modal1-dialog {
+        background: #fff;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .modal-dialog {
+        max-width: 388px;
+    }
+
+    .modal.fade .modal-dialog {
+        /* background: #fff; */
+        /* margin: 0; */
+        /* padding: 15px; */
+        /* display: flex; */
+        /* align-items: flex-start; */
+        /* height: 100%; */
+        /* overflow: hidden; */
+    }
+
+    .modal-dialog .modal-head {
+        font-size: 25px;
+    }
+
+    .modal-dialog .close {
+        right: 0;
+        top: 15px;
+    }
+
+    .modal-dialog .close span {
+        font-size: 24px !important;
+    }
+
+    .modal .modal-content {
+        border: 0;
+    }
+}
+
+
+
+/* Keyframes */
+
+@keyframes bannerImage {
+    0% {
+        transform: scale(1.3, 1.3);
+    }
+
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+@keyframes rotateSvg {
+    0% {
+        rotate: 10deg;
+    }
+
+    50% {
+        rotate: -5deg;
+    }
+
+    100% {
+        rotate: 10deg;
+    }
+}
+
+@keyframes zoomin-out {
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes zoomin-out1 {
+    50% {
+        transform: scale(1.01);
+    }
+}
+
+@keyframes textColor {
+    50% {
+        color: var(--black);
+    }
+}
+
+@keyframes textColor1 {
+    100% {
+        color: var(--white);
+    }
+}
+
+@keyframes scrollImages {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+.plansbox>img{
+  filter: blur(5px);
+}
