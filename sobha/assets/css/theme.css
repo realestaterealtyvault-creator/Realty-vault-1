@@ -1,0 +1,408 @@
+:root, body, .theme {
+    --Primary-color: #073B3A;
+    --Secondary-color: #D4A62A;
+    --button-color: #073B3A;
+    --button-hover-color: #006B64;
+    --button-text-color: #FFFFFF;
+    --button-text-hover-color: #FFFFFF;
+    --font-family: 'Outfit', sans-serif;
+}
+
+/* ==================== GLOBAL LAYOUT FIXES ==================== */
+/* Remove Right Side Box & Expand to Full 100% Width */
+.desktop-summary,
+aside.desktop-summary,
+section.desktop-summary {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+.main-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 72px !important;
+    display: block !important;
+}
+
+.left-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding-bottom: 0 !important;
+}
+
+.page-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* ==================== HEADER REDESIGN ==================== */
+nav.navbar,
+.navbar {
+    width: 100% !important;
+    background: #FFFFFF !important;
+    height: 74px !important;
+    min-height: 74px !important;
+    padding: 0 28px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+    border-bottom: 1px solid rgba(7, 59, 58, 0.08) !important;
+    z-index: 1030 !important;
+}
+
+.navbar .container-fluid {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+}
+
+/* Brand Logo Styling */
+.navbar-brand {
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 !important;
+    margin-right: 25px !important;
+    text-decoration: none !important;
+}
+
+.realtyvault-header-logo {
+    height: 50px !important;
+    max-height: 50px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    transition: transform 0.25s ease;
+}
+
+.realtyvault-header-logo:hover {
+    transform: scale(1.02);
+}
+
+/* Horizontal Modern Nav Links */
+.navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 4px !important;
+    margin: 0 auto !important;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-nav .nav-link {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    padding: 8px 13px !important;
+    color: #142B3B !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.1px !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    transition: all 0.25s ease !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #006B64 !important;
+    background: rgba(0, 107, 100, 0.06) !important;
+}
+
+/* Remove awkward underline pseudo-elements from legacy styles */
+.navbar-light .navbar-nav .nav-link::before,
+.navbar-light .navbar-nav .nav-link::after,
+.navbar-light .navbar-nav .nav-link.active::before,
+.navbar-light .navbar-nav .nav-link.active::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Header Right Action Buttons */
+.header-right-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.header-action-call {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+    background: #073B3A !important;
+    color: #FFFFFF !important;
+    padding: 8px 16px !important;
+    border-radius: 50px !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    border: 1px solid #D4A62A !important;
+    box-shadow: 0 3px 10px rgba(7, 59, 58, 0.18) !important;
+    transition: all 0.25s ease !important;
+    white-space: nowrap !important;
+}
+
+.header-action-call:hover {
+    background: #006B64 !important;
+    color: #FFFFFF !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(7, 59, 58, 0.28) !important;
+}
+
+.header-action-call i {
+    color: #D4A62A !important;
+    font-size: 13px !important;
+}
+
+.header-action-wa {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background: #25D366 !important;
+    color: #FFFFFF !important;
+    padding: 8px 16px !important;
+    border-radius: 50px !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    border: none !important;
+    box-shadow: 0 3px 10px rgba(37, 211, 102, 0.25) !important;
+    transition: all 0.25s ease !important;
+    white-space: nowrap !important;
+}
+
+.header-action-wa:hover {
+    background: #20BA5A !important;
+    color: #FFFFFF !important;
+    transform: translateY(-1px);
+}
+
+.header-action-cta {
+    background: linear-gradient(135deg, #D4A62A 0%, #B88E1E 100%) !important;
+    color: #073B3A !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    padding: 8px 18px !important;
+    border-radius: 50px !important;
+    border: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    box-shadow: 0 3px 12px rgba(212, 166, 42, 0.35) !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    white-space: nowrap !important;
+}
+
+.header-action-cta:hover {
+    background: linear-gradient(135deg, #E2B638 0%, #C99C23 100%) !important;
+    color: #073B3A !important;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(212, 166, 42, 0.45) !important;
+}
+
+/* ==================== HERO SECTION & CAROUSEL ==================== */
+#home {
+    width: 100% !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background: #000 !important;
+}
+
+#banner-carousel .carousel-item img {
+    width: 100% !important;
+    height: 640px !important;
+    object-fit: cover !important;
+}
+
+@media (max-width: 991px) {
+    #banner-carousel .carousel-item img {
+        height: 480px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    #banner-carousel .carousel-item img {
+        height: 380px !important;
+    }
+}
+
+/* Hero Floating Project Details Card */
+#home .project-details {
+    position: absolute !important;
+    top: 35px !important;
+    left: 45px !important;
+    width: 350px !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(212, 166, 42, 0.35) !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    z-index: 10 !important;
+}
+
+#home .project-details .badge-top {
+    background: #073B3A !important;
+    color: #D4A62A !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    padding: 6px 12px !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+#home .project-details h1 {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #073B3A !important;
+    margin-bottom: 2px !important;
+    letter-spacing: 0.5px !important;
+}
+
+#home .project-details h6 {
+    font-size: 13px !important;
+    color: #006B64 !important;
+    font-weight: 700 !important;
+    margin-bottom: 4px !important;
+}
+
+#home .project-details small {
+    color: #555 !important;
+    font-size: 12px !important;
+}
+
+/* Remove yellow dotted dashed lines completely */
+.offerBox {
+    padding: 0 16px !important;
+    margin: 8px 0 !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+.offerBox .innerBox {
+    background: rgba(212, 166, 42, 0.12) !important;
+    border-left: 3px solid #D4A62A !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-right: none !important;
+    border-radius: 4px !important;
+    padding: 7px 10px !important;
+    color: #073B3A !important;
+    font-weight: 600 !important;
+    font-size: 12.5px !important;
+    text-align: left !important;
+    line-height: 1.4 !important;
+}
+
+.offerBox .innerBox p {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    animation: none !important;
+}
+
+.animatedtext, .animatedtext1 {
+    background: transparent !important;
+    animation: none !important;
+}
+
+/* Price Box */
+.price-text {
+    color: #073B3A !important;
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+}
+
+.price-sub-text {
+    color: #073B3A !important;
+    font-weight: 800 !important;
+}
+
+/* General Buttons */
+.custom-btn, .btn.custom-btn {
+    background: linear-gradient(135deg, #073B3A 0%, #006B64 100%) !important;
+    border: 1px solid #D4A62A !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+}
+
+.custom-btn:hover, .btn.custom-btn:hover {
+    background: linear-gradient(135deg, #006B64 0%, #073B3A 100%) !important;
+    box-shadow: 0 4px 15px rgba(212, 166, 42, 0.35) !important;
+    color: #FFFFFF !important;
+}
+
+/* Table Pricing */
+.table-pricing thead {
+    background: #073B3A !important;
+    color: #FFFFFF !important;
+}
+
+.highlightData .iconBox {
+    background: #073B3A !important;
+    color: #D4A62A !important;
+}
+
+/* Mobile Responsiveness for Header */
+@media (max-width: 1199px) {
+    .header-project-badge {
+        display: none !important;
+    }
+    .header-action-wa {
+        display: none !important;
+    }
+}
+
+@media (max-width: 991px) {
+    nav.navbar,
+    .navbar {
+        height: 64px !important;
+        min-height: 64px !important;
+        padding: 0 16px !important;
+    }
+    .main-container {
+        margin-top: 64px !important;
+    }
+    .realtyvault-header-logo {
+        height: 38px !important;
+        max-height: 38px !important;
+    }
+    .navbar-collapse {
+        background: #FFFFFF !important;
+        padding: 16px !important;
+        border-radius: 8px !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+        margin-top: 10px !important;
+    }
+    .navbar-nav {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        width: 100% !important;
+        gap: 2px !important;
+    }
+    .navbar-nav .nav-link {
+        width: 100% !important;
+        padding: 10px 14px !important;
+    }
+    #home .project-details {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        border: none !important;
+        border-bottom: 2px solid #D4A62A !important;
+    }
+}

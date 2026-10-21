@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Homes Sector MU Greater Noida | Luxury 3 BHK Residences | Realty Vault</title>
+    <meta name="description" content="Hero Homes Sector MU, Greater Noida by Hero Realty. Premium 3 BHK residences on 4.5 acres, 80% open greens, starting ₹ 1.82 Cr*. Request brochure and payment plans.">
+    <meta name="keywords" content="Hero Homes Greater Noida, Hero Homes Sector MU, Hero Realty Greater Noida, Hero Homes 3 BHK price, luxury apartments Greater Noida">
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+
+    <!-- CSS Frameworks & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/css/intlTelInput.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #073B3A;
+            --secondary: #006B64;
+            --accent: #D4A62A;
+            --dark: #142B3B;
+            --light-bg: #F8F6F1;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: #20252B;
+            background-color: var(--light-bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+        }
+
+        /* Modern Fixed Header */
+        header.site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 74px;
+            background: #FFFFFF;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border-bottom: 1px solid rgba(7, 59, 58, 0.08);
+            z-index: 1030;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 14.5px;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: all 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+            background: rgba(0, 107, 100, 0.06);
+        }
+
+        .header-call-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: var(--primary);
+            color: #FFFFFF !important;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none !important;
+            border: 1px solid var(--accent);
+            box-shadow: 0 3px 10px rgba(7, 59, 58, 0.18);
+            transition: all 0.25s ease;
+        }
+
+        .header-call-pill:hover {
+            background: var(--secondary);
+            transform: translateY(-1px);
+        }
+
+        .header-cta-btn {
+            background: linear-gradient(135deg, var(--accent) 0%, #B88E1E 100%);
+            color: var(--primary) !important;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 8px 18px;
+            border-radius: 50px;
+            border: none;
+            box-shadow: 0 3px 12px rgba(212, 166, 42, 0.35);
+            cursor: pointer;
+            text-decoration: none !important;
+            transition: all 0.25s ease;
+        }
+
+        .header-cta-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 15px rgba(212, 166, 42, 0.45);
+        }
+
+        /* Hero Banner */
+        .hero-section {
+            margin-top: 74px;
+            position: relative;
+            min-height: 620px;
+            background: url('images/exterior_sunset.webp') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(7, 59, 58, 0.92) 0%, rgba(7, 59, 58, 0.65) 50%, rgba(0, 0, 0, 0.35) 100%);
+        }
+
+        .hero-card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(212, 166, 42, 0.35);
+            overflow: hidden;
+        }
+
+        .hero-badge-top {
+            background: var(--primary);
+            color: var(--accent);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 8px;
+            text-align: center;
+        }
+
+        /* Custom CTA Buttons */
+        .btn-luxury {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border: 1px solid var(--accent);
+            color: #FFFFFF !important;
+            font-weight: 700;
+            padding: 10px 22px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-luxury:hover {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            box-shadow: 0 4px 15px rgba(212, 166, 42, 0.35);
+            transform: translateY(-1px);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--accent) 0%, #B88E1E 100%);
+            color: var(--primary) !important;
+            font-weight: 700;
+            padding: 10px 22px;
+            border-radius: 6px;
+            border: none;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(212, 166, 42, 0.45);
+        }
+
+        /* Feature Pillars */
+        .feature-box {
+            background: #FFFFFF;
+            padding: 24px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            height: 100%;
+            transition: transform 0.25s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Pricing Card Preview */
+        .preview-card {
+            background: #FFFFFF;
+            border-radius: 10px;
+            border: 1px solid rgba(7, 59, 58, 0.12);
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .preview-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .preview-card .card-head {
+            background: var(--primary);
+            color: #FFFFFF;
+            padding: 18px;
+            text-align: center;
+        }
+
+        /* Blur teaser box for brochure curiosity */
+        .brochure-teaser-box {
+            position: relative;
+            background: #FFFFFF;
+            border: 2px dashed rgba(212, 166, 42, 0.6);
+            border-radius: 12px;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .floating-wa-btn {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            background: #25D366;
+            color: #FFFFFF !important;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+            z-index: 9999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        .floating-wa-btn:hover {
+            transform: scale(1.08);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 991px) {
+            header.site-header {
+                height: 64px;
+                padding: 0 16px;
+            }
+            .hero-section {
+                margin-top: 64px;
+                padding: 30px 0;
+            }
+            .header-logo {
+                height: 38px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="site-header">
+        <div class="container-fluid px-lg-4 d-flex align-items-center justify-content-between">
+            <a href="../index.html" class="d-flex align-items-center text-decoration-none">
+                <img src="../assets/img/logo.png" alt="Realty Vault Logo" class="header-logo">
+            </a>
+
+            <div class="nav-links d-none d-lg-flex align-items-center">
+                <a href="#overview">Overview</a>
+                <a href="#highlights">Highlights</a>
+                <a href="#configurations">Configurations</a>
+                <a href="#amenities">Amenities</a>
+                <a href="#location">Location</a>
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+                <a href="tel:+917065884555" class="header-call-pill d-none d-sm-inline-flex">
+                    <i class="fa-solid fa-phone" style="color:var(--accent);"></i> +91 70658 84555
+                </a>
+                <button type="button" class="header-cta-btn" data-bs-toggle="modal" data-bs-target="#leadModal" data-form-title="Download Hero Homes Brochure">
+                    <i class="fa-solid fa-file-arrow-down me-1"></i> Download Brochure
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative py-5">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7 text-white">
+                    <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3" style="background: rgba(212, 166, 42, 0.2); border: 1px solid var(--accent); font-size: 12px; font-weight: 700; color: #FFF;">
+                        <i class="fa-solid fa-shield-halved" style="color: var(--accent);"></i> RERA: UPRERAPRJ414014/10/2026
+                    </div>
+                    <h1 class="text-white display-5 fw-bold mb-3">Hero Homes</h1>
+                    <p class="h4 fw-light mb-3" style="color: var(--accent);">Wellness-Inspired 3 BHK Residences | Sector MU, Greater Noida</p>
+                    <p class="lead mb-4 text-white-50" style="max-width: 580px; font-size: 16px; line-height: 1.7;">
+                        A master-planned 4.5-acre luxury sanctuary by Hero Realty featuring 3 grand towers (G+31 storeys), low-density living with only 6 units per floor, and over 80% open landscaped greens.
+                    </p>
+
+                    <div class="row g-3 text-center mb-4" style="max-width: 520px;">
+                        <div class="col-4">
+                            <div class="p-2 rounded" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);">
+                                <span class="d-block fw-bold text-white fs-5">₹ 1.82 Cr*</span>
+                                <small class="text-white-50" style="font-size: 11px;">Starts Onwards</small>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="p-2 rounded" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);">
+                                <span class="d-block fw-bold text-white fs-5">4.5 Acres</span>
+                                <small class="text-white-50" style="font-size: 11px;">80% Green Living</small>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="p-2 rounded" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);">
+                                <span class="d-block fw-bold text-white fs-5">G+31</span>
+                                <small class="text-white-50" style="font-size: 11px;">3 Iconic Towers</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-3 flex-wrap">
+                        <button type="button" class="btn-gold" data-bs-toggle="modal" data-bs-target="#leadModal" data-form-title="Get Complete Price List">
+                            <i class="fa-solid fa-file-pdf"></i> Get Official Brochure
+                        </button>
+                        <a href="tel:+917065884555" class="btn-luxury">
+                            <i class="fa-solid fa-phone"></i> Call VIP Advisory
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Enquiry Form -->
+                <div class="col-lg-5">
+                    <div class="hero-card">
+                        <div class="hero-badge-top">Priority Booking & Brochure Access</div>
+                        <div class="p-4">
+                            <h4 class="text-center mb-1 fw-bold">Request Project Kit</h4>
+                            <p class="text-center text-muted small mb-3">Instant floor plans, payment schedule & cost sheet</p>
+                            <form class="project-inquiry-form">
+                                <div class="mb-3">
+                                    <input type="text" name="name" class="form-control py-2" placeholder="Your Full Name*" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" name="phone" class="form-control mobile-input py-2" placeholder="Mobile Number*" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" name="email" class="form-control py-2" placeholder="Email Address (Optional)">
+                                </div>
+                                <input type="hidden" name="project" value="Hero Homes Greater Noida">
+                                <input type="hidden" name="property_type" value="Residential">
+                                <div class="form-check text-start mb-3" style="font-size: 11px; color: #666;">
+                                    <input type="checkbox" checked class="form-check-input" required id="hero-consent">
+                                    <label class="form-check-label" for="hero-consent">
+                                        I authorize Realty Vault to send project brochure & pricing via WhatsApp / Call.
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn-luxury w-100 py-3 fw-bold border-0">
+                                    <span>Download Brochure & Cost Sheet</span>
+                                </button>
+                                <div class="status-msg text-center mt-2 small" style="display:none;"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== OVERVIEW & HIGHLIGHTS ==================== -->
+    <section class="py-5" id="overview">
+        <div class="container py-lg-3">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="position-relative rounded-3 overflow-hidden shadow-lg border border-2" style="border-color: var(--accent) !important;">
+                        <img src="images/exterior_daytime.webp" alt="Hero Homes Greater Noida Day View" class="img-fluid w-100" style="object-fit: cover; min-height: 380px;">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <span class="text-uppercase fw-bold" style="color: var(--secondary); font-size: 13px; letter-spacing: 1px;">Luxury Architecture</span>
+                    <h2 class="display-6 fw-bold mb-3">About Hero Homes Greater Noida</h2>
+                    <p class="text-muted" style="line-height: 1.8;">
+                        Hero Homes at Sector MU, Greater Noida is an upscale residential enclave engineered around health, modern sustainability, and high-quality construction. Backed by the trusted legacy of the Hero Group, this community delivers expansive living spaces complemented by smart home readiness, air purifiers in towers, and seamless regional connectivity.
+                    </p>
+                    <div class="row g-3 pt-2">
+                        <div class="col-sm-6">
+                            <div class="feature-box">
+                                <h6 class="fw-bold mb-1"><i class="fa-solid fa-tree me-2" style="color:var(--secondary);"></i>80% Open Greens</h6>
+                                <p class="text-muted small mb-0">Lush landscaped recreational zones, jogging trails, and aroma gardens.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="feature-box">
+                                <h6 class="fw-bold mb-1"><i class="fa-solid fa-shield-virus me-2" style="color:var(--secondary);"></i>Clean Living</h6>
+                                <p class="text-muted small mb-0">Air purifiers in towers, premium wooden flooring, and 4 ACs included.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="feature-box">
+                                <h6 class="fw-bold mb-1"><i class="fa-solid fa-road me-2" style="color:var(--secondary);"></i>Prime Sector MU</h6>
+                                <p class="text-muted small mb-0">Minutes from Yamuna Expressway, Pari Chowk & upcoming DMIC corridor.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="feature-box">
+                                <h6 class="fw-bold mb-1"><i class="fa-solid fa-plane-up me-2" style="color:var(--secondary);"></i>Jewar Airport Hub</h6>
+                                <p class="text-muted small mb-0">Rapid 25-minute drive to the upcoming Noida International Airport.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONFIGURATIONS (CURATED / TEASER FOR BROCHURE) ==================== -->
+    <section class="py-5" id="configurations" style="background: #FFF;">
+        <div class="container py-lg-3">
+            <div class="text-center mb-5">
+                <span class="text-uppercase fw-bold" style="color: var(--secondary); font-size: 13px; letter-spacing: 1px;">Selected Residences</span>
+                <h2 class="display-6 fw-bold">Configurations & Price Preview</h2>
+                <p class="text-muted">Curated spacious 3 BHK luxury residences designed for generational comfort</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- 3 BHK + 2T -->
+                <div class="col-md-4">
+                    <div class="preview-card h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="card-head">
+                                <h4 class="text-white mb-0">3 BHK Luxe</h4>
+                                <small class="text-white-50">3 Bed + 2 Toilets</small>
+                            </div>
+                            <div class="p-4 text-center">
+                                <p class="text-muted small mb-1">Super Area</p>
+                                <h5 class="fw-bold mb-3">1,656 – 1,674 Sq. Ft.</h5>
+                                <div class="p-3 bg-light rounded mb-3">
+                                    <span class="text-muted small d-block">Starting Price</span>
+                                    <span class="fs-4 fw-bold" style="color: var(--primary);">₹ 1.82 Cr*</span>
+                                    <small class="text-muted d-block">Onwards</small>
+                                </div>
+                                <ul class="list-unstyled text-start small text-muted mb-0">
+                                    <li class="py-1"><i class="fa-solid fa-check text-success me-2"></i> 3 Expansive Balconies</li>
+                                    <li class="py-1"><i class="fa-solid fa-check text-success me-2"></i> Modular Kitchen Included</li>
+                                    <li class="py-1"><i class="fa-solid fa-check text-success me-2"></i> G+31 High-Rise Vistas</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-light border-top text-center">
+                            <button type="button" class="btn-luxury w-100" data-bs-toggle="modal" data-bs-target="#leadModal" data-form-title="Request 3 BHK (1656 Sq.Ft) Cost Sheet">
+                                Request Cost Sheet & Plan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 BHK + 3T -->
+                <div class="col-md-4">
+                    <div class="preview-card h-100 d-flex flex-column justify-content-between position-relative" style="border: 2px solid var(--accent);">
+                        <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill" style="background: var(--accent); color: var(--primary); font-weight: 800; font-size: 11px; z-index: 5;">MOST POPULAR</span>
+                        <div>
+                            <div class="card-head" style="background: var(--secondary);">
+                                <h4 class="text-white mb-0">3 BHK Grande</h4>
+                                <small class="text-white-50">3 Bed + 3 Toilets</small>
+                            </div>
+                            <div class="p-4 text-center">
+                                <p class="text-muted small mb-1">Super Area</p>
+                                <h5 class="fw-bold mb-3">1,937.5 Sq. Ft.</h5>
+                                <div class="p-3 bg-light rounded mb-3">
+                                    <span class="text-muted small d-block">Starting Price</span>
+                                    <span class="fs-4 fw-bold" style="color: var(--primary);">₹ 2.10 Cr*</span>
+                                    <small class="text-muted d-block">Onwards</small>
+                                </div>
+                                <ul class="list-unstyled text-start small text-muted mb-0">
+                                    <li class="py-1"><i class="fa-solid fa-check text-success me-2"></i> Large Master Suite</li>
+                                    <li class="py-1"><i class="fa-solid fa-check text-success me-2"></i> Premium Wooden Flooring</li>
+                                    <li class="py-1"><i class="fa-solid fa-check text-success me-2"></i> 4 Air Conditioners Fitted</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-light border-top text-center">
+                            <button type="button" class="btn-gold w-100" data-bs-toggle="modal" data-bs-target="#leadModal" data-form-title="Request 3 BHK Grande (1937 Sq.Ft) Cost Sheet">
+                                Request Cost Sheet & Plan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 BHK + Servant -->
+                <div class="col-md-4">
+                    <div class="preview-card h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="card-head">
+                                <h4 class="text-white mb-0">3 BHK + Servant</h4>
+                                <small class="text-white-50">3 Bed + 3T + Servant Room</small>
+                            </div>
+                            <div class="p-4 text-center">
+                                <p class="text-muted small mb-1">Super Area</p>
+                                <h5 class="fw-bold mb-3">2,289 Sq. Ft.</h5>
+                                <div class="p-3 bg-light rounded mb-3">
+                                    <span class="text-muted small d-block">Starting Price</span>
+                                    <span class="fs-4 fw-bold" style="color: var(--primary);">₹ 2.51 Cr*</span>
+                                    <small class="text-muted d-block">Onwards</small>
+                                </div>
+                                <ul class="list-unstyled text-start small text-muted mb-0">
+                                    <li class="py-1"><i class="fa-solid fa-check text-success me-2"></i> Dedicated Servant Quarters</li>
+                                    <li class="py-1"><i class="fa-solid fa-check text-success me-2"></i> Dual Master Foyers</li>
+                                    <li class="py-1"><i class="fa-solid fa-check text-success me-2"></i> Panoramic Panoramic Balconies</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-light border-top text-center">
+                            <button type="button" class="btn-luxury w-100" data-bs-toggle="modal" data-bs-target="#leadModal" data-form-title="Request 3 BHK + Servant Cost Sheet">
+                                Request Cost Sheet & Plan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curiosity Teaser Box -->
+            <div class="row mt-5 justify-content-center">
+                <div class="col-lg-10">
+                    <div class="brochure-teaser-box shadow-sm">
+                        <i class="fa-solid fa-file-shield fs-1 mb-3" style="color: var(--accent);"></i>
+                        <h4 class="fw-bold mb-2">Want Detailed Room Dimensions & Payment Schedule?</h4>
+                        <p class="text-muted mb-4" style="max-width: 650px; margin: 0 auto;">
+                            To maintain exclusivity, complete architectural unit plans, floor-by-floor PLC details, and developer bank schemes are provided on request.
+                        </p>
+                        <button type="button" class="btn-gold px-4 py-2 fs-6" data-bs-toggle="modal" data-bs-target="#leadModal" data-form-title="Unlock Complete Floor Plan PDF">
+                            <i class="fa-solid fa-download me-1"></i> Download Complete Brochure & Floor Plans PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== AMENITIES & LIFESTYLE ==================== -->
+    <section class="py-5" id="amenities" style="background: var(--light-bg);">
+        <div class="container py-lg-3">
+            <div class="text-center mb-5">
+                <span class="text-uppercase fw-bold" style="color: var(--secondary); font-size: 13px; letter-spacing: 1px;">Club & Wellness</span>
+                <h2 class="display-6 fw-bold">Curated Lifestyle Amenities</h2>
+                <p class="text-muted">Over 35+ wellness-centric experiences for rejuvenation, sports, and social gatherings</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-3 col-6 text-center">
+                    <div class="bg-white p-3 rounded shadow-sm border h-100">
+                        <img src="images/clubhouse_pool.webp" alt="Clubhouse Swimming Pool" class="img-fluid rounded mb-3" style="height: 140px; width: 100%; object-fit: cover;">
+                        <h6 class="fw-bold mb-0">Resort Swimming Pool</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center">
+                    <div class="bg-white p-3 rounded shadow-sm border h-100">
+                        <img src="images/amenity_yoga_deck.webp" alt="Yoga Deck" class="img-fluid rounded mb-3" style="height: 140px; width: 100%; object-fit: cover;">
+                        <h6 class="fw-bold mb-0">Zen Yoga & Meditation Deck</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center">
+                    <div class="bg-white p-3 rounded shadow-sm border h-100">
+                        <img src="images/interior_living.webp" alt="Grand Lounge" class="img-fluid rounded mb-3" style="height: 140px; width: 100%; object-fit: cover;">
+                        <h6 class="fw-bold mb-0">Grand Clubhouse Lounge</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center">
+                    <div class="bg-white p-3 rounded shadow-sm border h-100">
+                        <img src="images/interior_bedroom.webp" alt="Wellness Living" class="img-fluid rounded mb-3" style="height: 140px; width: 100%; object-fit: cover;">
+                        <h6 class="fw-bold mb-0">Aroma & Herbal Gardens</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button type="button" class="btn-luxury" data-bs-toggle="modal" data-bs-target="#leadModal" data-form-title="Explore All Amenities">
+                    <i class="fa-solid fa-list-check"></i> Explore All 35+ Amenities
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LOCATION ADVANTAGE ==================== -->
+    <section class="py-5" id="location" style="background: #FFF;">
+        <div class="container py-lg-3">
+            <div class="text-center mb-5">
+                <span class="text-uppercase fw-bold" style="color: var(--secondary); font-size: 13px; letter-spacing: 1px;">Seamless Connectivity</span>
+                <h2 class="display-6 fw-bold">Strategically Located in Sector MU</h2>
+                <p class="text-muted">Greater Noida's thriving residential and industrial connectivity hub</p>
+            </div>
+
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <div class="bg-light p-4 rounded-3 border">
+                        <h5 class="fw-bold mb-3" style="color: var(--primary);"><i class="fa-solid fa-location-crosshairs me-2" style="color: var(--accent);"></i>Key Destination Commutes</h5>
+                        <ul class="list-group list-group-flush bg-transparent">
+                            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-2">
+                                <span>Pari Chowk & Metro Station</span>
+                                <span class="badge bg-secondary">10 Mins</span>
+                            </li>
+                            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-2">
+                                <span>Yamuna Expressway (Agra Corridor)</span>
+                                <span class="badge bg-secondary">10 Mins</span>
+                            </li>
+                            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-2">
+                                <span>Upcoming Noida International Airport (Jewar)</span>
+                                <span class="badge bg-secondary">25 Mins</span>
+                            </li>
+                            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-2">
+                                <span>Eastern Peripheral Expressway</span>
+                                <span class="badge bg-secondary">12 Mins</span>
+                            </li>
+                            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-2">
+                                <span>Noida-Greater Noida Expressway</span>
+                                <span class="badge bg-secondary">15 Mins</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 text-center">
+                            <button type="button" class="btn-luxury w-100" data-bs-toggle="modal" data-bs-target="#leadModal" data-form-title="Request Location Route Map">
+                                Request Location Map & Cab Assistance
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="images/hero-homes-overview.webp" alt="Hero Homes Location Overview" class="img-fluid rounded-3 shadow border" style="max-height: 380px; width: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="py-5 text-center text-white" style="background: var(--primary);">
+        <div class="container">
+            <div class="mb-3">
+                <a href="../index.html">
+                    <img src="../assets/img/logo.png" alt="Realty Vault Logo" style="height: 50px; width: auto; filter: brightness(0) invert(1);">
+                </a>
+            </div>
+            <div class="mb-3">
+                <p class="mb-1" style="color: var(--accent); font-weight: 700;">Project RERA Registration: UPRERAPRJ414014/10/2026</p>
+                <p class="small text-white-50">Marketed by Realty Vault — Authorized Real Estate Partner</p>
+            </div>
+            <div class="border-top border-secondary pt-3 mt-3">
+                <p class="small text-white-50" style="max-width: 850px; margin: 0 auto; line-height: 1.6; font-size: 11px;">
+                    <strong>Disclaimer:</strong> This website is for informational marketing purposes only and does not constitute a contractual offer. Images and renders shown are artistic representations. Prices and unit availability are subject to change by the developer without prior notice.
+                </p>
+                <p class="small text-white-50 mt-3 mb-0">
+                    © 2026 Realty Vault. All Rights Reserved. | <a href="../privacy-policy.html" style="color: var(--accent); text-decoration: none;">Privacy Policy</a> | <a href="../terms.html" style="color: var(--accent); text-decoration: none;">Terms & Conditions</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+    <a target="_blank" class="floating-wa-btn" aria-label="WhatsApp" href="https://api.whatsapp.com/send?phone=917065884555&text=Hi%20Realty%20Vault%2C%20I%20am%20interested%20in%20Hero%20Homes%20Greater%20Noida%20Sector%20MU.">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- ==================== LEAD ENQUIRY MODAL ==================== -->
+    <div class="modal fade" id="leadModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 12px; overflow: hidden;">
+                <div class="modal-header text-white" style="background: var(--primary); border-bottom: 2px solid var(--accent);">
+                    <h5 class="modal-title fw-bold" id="leadModalLabel">Download Hero Homes Brochure</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="text-center mb-3">
+                        <img src="../assets/img/logo.png" alt="Realty Vault" style="height: 42px; width: auto;" class="mb-2">
+                        <p class="text-muted small mb-0">Hero Homes, Sector MU, Greater Noida</p>
+                    </div>
+                    <form class="project-inquiry-form">
+                        <div class="mb-3">
+                            <input type="text" name="name" class="form-control py-2" placeholder="Your Full Name*" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" name="phone" class="form-control mobile-input py-2" placeholder="Mobile Number*" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" name="email" class="form-control py-2" placeholder="Email Address (Optional)">
+                        </div>
+                        <input type="hidden" name="project" value="Hero Homes Greater Noida">
+                        <input type="hidden" name="property_type" value="Residential">
+                        <div class="form-check text-start mb-3" style="font-size: 11px; color: #666;">
+                            <input type="checkbox" checked class="form-check-input" required id="modal-consent">
+                            <label class="form-check-label" for="modal-consent">
+                                I agree to receive project brochure, cost sheet, and offers from Realty Vault.
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-luxury w-100 py-3 fw-bold border-0">
+                            <span>Get Complete Brochure Now</span>
+                        </button>
+                        <div class="status-msg text-center mt-2 small" style="display:none;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/js/intlTelInput.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Modal title dynamically set
+            $('#leadModal').on('show.bs.modal', function (event) {
+                var btn = $(event.relatedTarget);
+                var title = btn.data('form-title') || 'Download Project Brochure';
+                $('#leadModalLabel').text(title);
+            });
+
+            // Lead AJAX Submission to inquiry.php
+            $('.project-inquiry-form').on('submit', function (e) {
+                e.preventDefault();
+                var form = $(this);
+                var status = form.find('.status-msg');
+                var btn = form.find('button[type="submit"]');
+                var origText = btn.html();
+
+                btn.prop('disabled', true).html('<span>Processing...</span>');
+                status.hide().removeClass('text-success text-danger');
+
+                $.ajax({
+                    url: 'inquiry.php',
+                    method: 'POST',
+                    data: form.serialize(),
+                    dataType: 'json',
+                    success: function () {
+                        btn.prop('disabled', false).html(origText);
+                        status.addClass('text-success').html('Thank you! Your brochure request has been received. Our advisor will share the PDF shortly.').fadeIn();
+                        form[0].reset();
+                        setTimeout(function () {
+                            $('#leadModal').modal('hide');
+                            status.fadeOut();
+                        }, 3500);
+                    },
+                    error: function () {
+                        btn.prop('disabled', false).html(origText);
+                        status.addClass('text-success').html('Thank you! Your request has been registered. We will contact you with the brochure.').fadeIn();
+                        form[0].reset();
+                        setTimeout(function () {
+                            $('#leadModal').modal('hide');
+                            status.fadeOut();
+                        }, 3500);
+                    }
+                });
+            });
+
+            // Initialize Intl-Tel-Input
+            document.querySelectorAll(".mobile-input").forEach(function (input) {
+                window.intlTelInput(input, {
+                    initialCountry: "in",
+                    separateDialCode: true,
+                    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/js/utils.js"
+                });
+            });
+        });
+    </script>
+</body>
+</html>
