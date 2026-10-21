@@ -1,0 +1,1924 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<!-- Mirrored from rggroup.net.in/pleiaddes/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 07:02:58 GMT -->
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Biigtech New Launch| Commercial Project | Greater Noida</title>
+
+   <meta name="description" content="">
+
+   <meta name="keywords" content="">
+
+
+
+   <meta name="author" content="">
+
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+
+   <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+   <!-- <link rel="shortcut icon" href="img/favicon-sobha.html" type="image/favicon"> -->
+
+   <link rel="stylesheet" href="css/style.css">
+        <link href="../assets/css/premium-theme.css" rel="stylesheet">
+
+  
+
+   <script>
+
+                 
+
+      function contactusbutton(){
+
+             var name =  document.getElementById('name').value;
+
+             var email =  document.getElementById('email').value;
+
+             var phone =  document.getElementById('phone').value;
+
+             var city =  document.getElementById('city').value;
+
+             var ip =  document.getElementById('ip').value;
+
+            
+
+           if(name=='' || name==null){
+
+                 document.getElementById('name').focus();                
+
+                 return false;
+
+           }
+
+          
+
+           if(phone=='' || phone==null){
+
+                 document.getElementById('phone').focus();
+
+                 return false;
+
+           }
+
+           
+
+           if(phone.length > 15 || phone.length < 10){
+
+                 document.getElementById('phone').focus();
+
+                  alert('Plase enter your 10 digit mobile number');
+
+                 return false;
+
+           }
+
+           
+
+           if(email=='' || email==null){
+
+                 document.getElementById('email').focus();
+
+                 return false;
+
+           }
+
+           
+
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+ 
+
+            if (reg.test(email) == false) 
+
+            {
+
+              alert("Invalid Email Address");
+
+              
+
+                return (false);
+
+            }
+
+          
+
+
+
+           if(city=='' || city==null){
+
+                 document.getElementById('city').focus();
+
+                 return false;
+
+           }
+
+           
+
+
+
+
+
+         //   document.getElementById('contactusbutton').style.display = "none";
+
+         $('#SubmitQuery').prop("disabled",true);
+
+          
+
+            
+
+           $.ajax({
+
+                  header: { 'Access-Control-Allow-Origin':'*'},
+
+               url : "https://investoxpert.remserp.com/WebCreate.aspx",
+
+                 data: {'UID':'fourqt','PWD':'wn9mxO76f34=','name':name,'Email':email,'Mob':phone,'Channel':'MS','Src':utm_source,'City':'','Location':'','Project':'RG Pleiaddes Noida','Remark':ip,'url':'', 'fld1':utm_source, 'fld2': utm_campaignID, 'fld3':ip, 'fld4':utm_term, 'Adset_Name':utm_medium},
+
+                
+
+                 cache: 'false',
+
+                 type: 'get',
+
+                 success: function (res) {
+
+                      var ip =  document.getElementById('ip').value;
+
+                      var message = "";
+
+                      $.ajax({
+
+                          header: { 'Access-Control-Allow-Origin':'*'},
+
+                          url : "https://lms.theniraaslatrio.com/request.php",
+
+                          data: {'name':name,'Email':email,'Mob':phone,'city' : city,'Project':'RG Pleiaddes Noida','ip':ip,'message':message, 'gclid':gclid, 'utm_source': utm_source, 'utm_campaignID': utm_campaignID, 'utm_medium': utm_medium, 'utm_term':utm_term},                              
+
+                          cache: 'false',
+
+                          type: 'post',
+
+                            
+
+                      })
+
+
+
+                     setTimeout(function(){window.location.href='thankyou.html'; }, 100);   
+
+                    
+
+                 }
+
+           })
+
+         }
+
+ 
+
+   
+
+     </script>                         
+
+</head>
+
+
+
+<body>
+
+
+
+   <div class="modal fade form-popup-bg" id="enquireModal" tabindex="-1" aria-labelledby="enquireModalLabel"
+
+      aria-hidden="true">
+
+      <div class="form-container">
+
+         <div class="modal-header border-0 p-0">
+
+            <button class="btnCloseForm close-button">X</button>
+
+         </div>
+
+
+
+         <div class="row align-items-center text-center">
+
+
+
+            <div class="col-sm-12">
+
+               <div class="form_text">
+
+
+
+                  <h3 class="form_title mb-3"> Schedule A Site Visit </h3>
+
+                  <form method="post" class="contact-form" id="submitform">
+
+                     <div class="mb-3 position-relative col-lg-12">
+
+                        <input id="name" name="name" class="form-control text_form popup_form" placeholder="Enter Your Name"
+
+                           required="">
+
+                        <span class="icon-inside"><i class="fas fa-user"></i></span>
+
+                     </div>
+
+                     <div class="mb-3 position-relative col-lg-12">
+
+                        <input id="email" name="email" class="form-control text_form popup_form" placeholder="Enter Your Email Address"
+
+                            required="">
+
+                        <span class="icon-inside"><i class="fas fa-envelope"></i></span>
+
+                     </div>
+
+                     <div class="mb-3 position-relative col-lg-12">
+
+                        <input autocomplete="off" type="text" id="phone" name="phone"
+
+                           class="form-control text_form popup_form" placeholder="Enter Your Mobile Number" required=""
+
+                           >
+
+                        <span class="icon-inside"><i class="fa-solid fa-phone"></i></span>
+
+                     </div>
+
+                     <input type="hidden" class="form-control text_form popup_form" id="city" value="Noida" placeholder="Enter Your City*"  name="city" required>
+
+                     <input type="hidden" name="" id="ip" value="49.249.44.18">
+
+
+
+                     <div class="col-lg-12 form-group">
+
+                        <div class="advanced-button">
+
+                           <input type="button" value="Book A Site Visit" name="submit"  class="header_phone theme_button" id="SubmitQuerytop" onclick="contactusbutton()">
+
+                        </div>
+
+                     </div>
+
+                     <div class="text-center mt-2 col-lg-12">
+
+                        <a class="btn call_now" href="tel:7065884555"> <i
+
+                              class="fa fa-phone me-2"></i>7065884555</a>
+
+                     </div> 
+
+                     <div class="form-response"></div>
+
+                  </form>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </div>
+
+   </div>
+
+
+
+
+
+   <!-- modal popup on restart -->
+
+   <div class="modal fade madal-reload" id="exampleModal" tabindex="-1" role="dialog"
+
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+      <div class="modal-dialog" role="document">
+
+         <div class="modal-content">
+
+            <div class="modal-header">
+
+
+
+               <button type="button" class="close btan_g" data-dismiss="modal" aria-label="Close">
+
+                  <span aria-hidden="true">&times;</span>
+
+               </button>
+
+            </div>
+
+            <div class="modal-body ">
+
+
+
+               <div class="row pt-2 align-items-center">
+
+                  <div class="col-sm-12">
+
+                     <div class="form_modal text-center">
+
+                        <div class="motal_form_text pb-2">
+
+                           <h5 class="modal-title" id="exampleModalLabel">Biigtech</h5>
+
+
+
+                           <p class="mb-1 pt-2 mb-2 mt-1"><b> Type : </b> Commercial</p>
+
+                        </div>
+
+                        <form method="post" class="contact-form banner_form pt-2">
+
+                           <div class="form_sectionr row text-center justify-content-center">
+
+
+
+                              <div class="mb-3 position-relative col-lg-12">
+
+                                 <input id="name2" name="name2" class="form-control text_form"
+
+                                    placeholder="Enter Your Name"  pattern="[a-zA-Z ]{4,35}" required="">
+
+                                 <span class="icon-inside"><i class="fas fa-user"></i></span>
+
+                              </div>
+
+                              <div class="mb-3 position-relative col-lg-12">
+
+                                 <input type="email" id="email2" name="email2"
+
+                                    class="form-control text_form email-address" placeholder="Enter Your Email"
+
+                                    pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+" required="">
+
+                                 <span class="icon-inside"><i class="fas fa-envelope"></i></span>
+
+                              </div>
+
+                              <div class="mb-3 position-relative col-lg-12">
+
+                                 <input type="text" id="phone2" name="phone2"
+
+                                    class="form-control text_form number-only" placeholder="Enter Your Number" required=""
+
+                                    pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}">
+
+                                 <span class="icon-inside"><i class="fa-solid fa-phone"></i></span>
+
+                              </div>
+
+                              <input type="hidden" value="Noida" class="form-control text_form number-only" id="city" placeholder="Enter Your City*" name="city">
+
+                              <input type="hidden" name="" id="ip" value="49.249.44.18">
+
+                              <div class="col-lg-12 form-group">
+
+                                 <div class="advanced-button">
+
+                                    <input type="button" value="Enquire Now" name="submit" class="header_phone theme_button" id="SubmitQuerytop" onclick="contactusbutton2()">
+
+                                    <!-- <button class="header_phone theme_button" type="submit" id="SubmitQuerytop">GET CALL
+
+                                       BACK</button> -->
+
+                                 </div>
+
+                              </div>
+
+                               <div class="text-center mt-2 col-lg-12">
+
+                                 <a class="btn call_now" href="tel:7065884555"> <i
+
+                                       class="fa fa-phone me-2"></i>7065884555</a>
+
+                              </div> 
+
+                              <div class="form-response"></div>
+
+                           </div>
+
+                        </form>
+
+                     </div>
+
+                  </div>
+
+
+
+               </div>
+
+            </div>
+
+
+
+
+
+         </div>
+
+      </div>
+
+   </div>
+
+   <!--  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- ===========================btn sticky icon start================================== -->
+
+   <div class="sticky_icon">
+
+      <div class="social_icon">
+
+         <ul class="d-flex">
+
+            <div class="col-4">
+
+               <li><a href="tel:7065884555">Phone</a></li>
+
+            </div>
+
+            <!--<div class="col-4">-->
+
+            <!--   <li><a href=""-->
+
+            <!--         target="_blank" class="fixed-Whatsapp">Whatsapp</a></li>-->
+
+            <!--</div> -->
+
+            <div class="col-4 border-0">
+
+               <li><a class="btnOpenForm" href="#">Enquire Now</a></li>
+
+            </div>
+
+         </ul>
+
+      </div>
+
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+   <!-- ==============btn scroll section start===================== -->
+
+   <!-- <div class="go-top"> <a
+
+         href=""
+
+         target="_blank" class="fixed-Whatsapp-icon"><i class="fa-brands fa-whatsapp"></i></a></li>
+
+   </div> -->
+
+   <!-- =====================header sart ======================== -->
+
+
+
+   <header>
+
+      <div class="header py-lg-3 py-2 px-lg-5 px-2">
+
+         <div class="container-xll mx-lg-3 mx-3 header_with">
+
+            <div class="row align-items-center">
+
+               <div class="col-lg-2  text-start">
+
+                  <div class="logo d-flex"> <a class="logo_1" href="#"><img src="img/logo.png" alt="logo1"
+
+                           width="140"></a> </div>
+
+               </div>
+
+               <div class="col-lg-7">
+
+                  <div class="menu float-end">
+
+                     <ul class="d-lg-flex align-items-center">
+
+                        <li><a class="active hamberger" href="#">Home</a></li>
+
+                        <!-- <li><a class="hamberger" href="#about-sec">About</a></li> -->
+
+                        <li> <a class="hamberger" href="#Price_list_jump">Price List</a></li>
+
+                        <li><a class="hamberger" href="#highlight-sec">Highlights</a></li>
+
+                        <li> <a class="hamberger" href="#amenities"> Amenities</a></li>
+
+                        <li> <a class="hamberger" href="#floor_plan">Floor Plan</a></li>
+
+                        <li> <a class="hamberger" href="#location-sec">Location</a></li>
+
+                     </ul>
+
+                     <div class="hamberger">
+
+                        <div class="mobilemenu"> </div>
+
+                     </div>
+
+
+
+                  </div>
+
+
+
+               </div>
+
+
+
+               <div class="col-lg-3">
+
+                  <div class="contect-us float-end " style="float: right !important;">
+
+                     <div class="d-flex ">
+
+                        <ul class="d-flex me-2 align-items-center">
+
+                           <li class="me-3"><a href="tel:7065884555"><i class="fa fa-phone"
+
+                                    aria-hidden="true"></i></a>
+
+                           </li>
+
+                           <li> <a href="tel:7065884555"><span>7065884555</span></a> </li>
+
+                        </ul>
+
+                     </div>
+
+                  </div>
+
+               </div> 
+
+
+
+               
+
+                <!-- <div class="col-lg-3">
+
+                 <div class="contect-us float-end " style="float: right !important;">
+
+                  <div class="d-flex ">
+
+                       <ul class="d-flex me-2 align-items-center">
+
+                          <li class="me-3"><a href="" class="btnOpenForm"><i class="fa fa-question-circle"
+
+                                   aria-hidden="true"></i></a>
+
+                          </li>
+
+                          <li> <a href="" class="btnOpenForm" ><span>Enquire Now</span></a> </li>
+
+                       </ul>
+
+                    </div>
+
+                 </div>
+
+            </div>  -->
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+         </div>
+
+      </div>
+
+
+
+   </header> <!-- =========================header close ========================== -->
+
+
+
+   <!-- =========================header close ========================== -->
+
+   <div class="banner_bg">
+
+      <div class="banner">
+
+         <div class="banner_img">
+
+            <div class="img_banner">
+
+               <img src="img/banner.webp" width="100%" alt="banner_bg">
+
+            </div>
+
+
+
+            <div class="banner_text mx-md-3">
+
+               <div class="container-fluid mx-lg-5 px-lg-5">
+
+                  <div class="row align-items-center">
+
+
+
+                     <div class="col-lg-6 col-md-6">
+
+                        <div class="banner_wrapper_text">
+
+
+
+                           <h1 class="mb-1 mt-2">Biigtech</h1>
+
+
+
+                           <h6 class="mb-md-5 mb-4"><span><i class="fa-solid fa-location-dot me-2"></i></span>
+
+                              At Knowledge Park-3 &nbsp&nbsp  Greater Noida </h6>
+
+                           <div class="banner_highlight mt-3">
+
+                              <ul class="">
+
+
+
+                                 <li class="mb-3">
+
+                                    <h3 class=""><i class="fa-solid fa-building-user me-3"></i> Land Area - 4.23 Acres </h3>
+
+                                 </li>
+
+                                 <li cclass="mb-3">
+
+                                    <h3 class=""><i class="fa-solid fa-building-user me-3"></i>Total Unit : 725 </h3>
+
+                                 </li>
+
+                                 <li cclass="mb-3">
+
+                                    <h3 class=""><i class="fa-solid fa-building-user me-3"></i> 2-Towers And 17-Floors </h3>
+
+                                 </li>
+
+                                 <!-- <li class="mb-3" style="margin-top: 10px;">-->
+
+                                 <!--   <h3 class=""><i class="fa-solid fa-building-user me-3"></i>Proposed Completion : Oct 2030 </h3>-->
+
+                                 <!--</li>-->
+
+                              </ul>
+
+                           </div>
+
+
+
+                           <!-- <h3 class="mt-1 mb-3 align-items-center fs-1"></h3> -->
+
+                           <div class="bgk mt-lg-5">
+
+                              <ul class="mt-3 d-flex align-items-center">
+
+
+
+                                 <li class="">
+
+                                    <h3 class="">Starting BSP :</h3>
+
+                                    <p class="mt-lg-3 mt-2">â¹ 10,250 <sub class="fs-5"> /- sq.ft. Onwards </sub></p>
+
+                                 </li>
+
+                              </ul>
+
+                           </div>
+
+                        </div>
+
+                     </div>
+
+
+
+                     <div class="col-lg-5 mb-mobile mb-mobile col-md-6 d-none d-md-block">
+
+
+
+                        <div class="Banner-form  float-end">
+
+                           <form action="inquiry.php" method="post" autocomplete="off" class="contact-form banner_form">
+
+                              <div class="form_section">
+
+                                 <div class="form_text text-center">
+
+                                    <h3 class="form_title mb-3">Send Us A Message</h3>
+
+
+
+                                 </div>
+
+                                 <div class="mb-4 position-relative">
+
+                                    <input id="qname" name="qname" class="form-control text_form"
+
+                                       placeholder="Enter Your Name"
+
+                                       required="">
+
+                                    <span class="icon-inside"><i class="fas fa-user"></i></span>
+
+                                 </div>
+
+                                 <div class="mb-4 position-relative">
+
+                                    <input type="email" id="qemail" name="qemail"
+
+                                       class="form-control text_form email-address mb-4" placeholder="Enter Your Email"
+
+                                        required="">
+
+                                    <span class="icon-inside"><i class="fas fa-envelope"></i></span>
+
+                                 </div>
+
+                                 <div class="mb-4 position-relative">
+
+                                    <input type="text" id="qphone1" name="qphone1"
+
+                                       class="form-control text_form number-only mb-4" placeholder="Enter Your Number" required=""
+
+                                       >
+
+                                    <span class="icon-inside"><i class="fa-solid fa-phone"></i></span>
+
+                                 </div>
+
+                                 <input type="text"  class="form-control text_form number-only mb-4" id="qdesc" name="qdesc" placeholder="Message.." >
+
+                                 <div class="col-lg-12 form-group">
+
+                                    <div class="advanced-button">
+
+                                        <button class="header_phone theme_button" type="submit" id="SubmitQuerytop">GET
+
+                                          CALL BACK</button>
+
+                                          <!-- <input type="button" name="submit" class="header_phone theme_button" id="SubmitQuerytop" onclick="contactusbutton1()"> -->
+
+                                    </div>
+
+                                 </div>
+
+                                  
+
+                                 
+
+                              </div>
+
+                           </form>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+
+
+
+
+         </div>
+
+      </div>
+
+
+
+
+
+   </div>
+
+
+
+   <!-- banner section closed -->
+
+   <div class="form_bottom">
+
+      <div class="col-lg-4 mb-mobile col-md-5 d-block d-md-none">
+
+         <div class="Banner-form-mb">
+
+            <form method="post" action="inquiry.php" autocomplete="off" class="contact-form banner_form">
+
+               <div class="form_section">
+
+                  <div class="form_text text-center">
+
+                     <h3 class="form_title mb-2"> Schedule A Site Visit </h3>
+
+                  </div>
+
+                  <div class="mb-4 position-relative">
+
+                     <input type="text" id="qname" name="qname" class="form-control text_form"
+
+                        placeholder="Enter Your Name"  pattern="[a-zA-Z ]{4,35}" required="">
+
+                     <span class="icon-inside"><i class="fas fa-user"></i></span>
+
+                  </div>
+
+                  <div class="mb-4 position-relative">
+
+                     <input type="email" id="qemail" name="qemail"
+
+                        class="form-control text_form email-address mb-4" placeholder="Enter Your Email"
+
+                        pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+" required="">
+
+                     <span class="icon-inside"><i class="fas fa-envelope"></i></span>
+
+                  </div>
+
+                  <div class="mb-4 position-relative">
+
+                     <input type="text" id="qphone" name="qphone"
+
+                        class="form-control text_form number-only mb-4" placeholder="Enter Your Number"
+
+                        required="" pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}">
+
+                     <span class="icon-inside"><i class="fa-solid fa-phone"></i></span>
+
+                  </div>
+
+                  <input type="text" class="form-control" id="qdesc" name="qdesc" placeholder="Message..">
+
+                  
+
+                  <div class="col-lg-12 form-group">
+
+                     <div class="advanced-button">
+
+                        <!-- <input type="button" value="Enquire Now" name="submit" class="header_phone theme_button" id="SubmitQuerytop" onclick="contactusbutton3()" style="background-color: #000; color: #fff;"> -->
+
+                         <button class="header_phone theme_button" type="submit" id="SubmitQuerytop">GET CALL
+
+                           BACK</button> 
+
+                     </div>
+
+                  </div>
+
+                 <div class="text-center mt-2 col-lg-12">
+
+                     <a class="btn call_now" href="tel:7065884555"> <i
+
+                           class="fa fa-phone me-2"></i>7065884555</a>
+
+                  </div> 
+
+                  <div class="form-response"></div>
+
+               </div>
+
+            </form>
+
+         </div>
+
+      </div>
+
+   </div>
+
+   <main>
+
+          <!-- <section style="margin-top:15px;"cursor>
+
+      <container  class="btnOpenForm" style="cursor:pointer;">
+
+           <div>
+
+                             <img data-src="img/crc-measta-desktop-new.jpg" src="img/crc-measta-desktop-new.jpg" alt="#" class="desktop-banner" style="width: 100%;">
+
+        <img data-src="img/crc-measta-mobile-new.jpg" src="img/crc-measta-mobile-new.jpg" alt="#" class="mobile-banner" style="width: 100%;">
+
+         </div>
+
+      </container>
+
+  </section>   -->
+
+      <!--================ from section end ============== -->
+
+      <div class="about_bg" id="about-sec">
+
+         <div class="container">
+
+            <div class="row align-items-center">
+
+
+
+               <div class="col-lg-12 ">
+
+                  <div class="about_text me-lg-5 ms-0 mb-lg-0 mb-4">
+
+                     <h2 class="">About Biigtech</h2>
+
+                     <p class="mt-3  mb-4">For Commercial seeking a promising residential address in Greater Noida, Biigtech at Knowledge Park 3 emerges as an excellent choice. this newly launched project is thoughtfully designed to meet the evolving lifestyle needs of modern families. Scheduled for possession by June 2030, the project offers a wide range of residential options across multiple budget segments, making it suitable for both end-users and investors.
+
+
+
+                        Prasandi Biigtech Greater Noida is a RERA-approved residential development, ensuring complete transparency and credibility. All project details are officially registered and accessible on the state RERA portal under the registration number UPRERAPRJ656513/08/2025, providing added confidence and peace of mind to buyers.</p>
+
+                     <div class="btan mt-lg-4 mt-3">
+
+                        <a class="btnOpenForm " href="#">Download Brochure <i
+
+                              class="fa-regular fa-file-pdf ms-2"></i></a>
+
+                     </div>
+
+
+
+                  </div>
+
+               </div>
+
+
+
+
+
+               <!-- <div class="col-lg-5">
+
+                  <div class="about_img">
+
+                     <img src="img/highlight.webp" width="100%" alt="about">
+
+                  </div>
+
+               </div> -->
+
+
+
+            </div>
+
+         </div>
+
+
+
+      </div>
+
+      <!--====================== about bg =========== -->
+
+
+
+      <!--////////////////// price list section start ///////////////// -->
+
+
+
+
+
+      <div class="price_list_bg" id="Price_list_jump">
+
+         <div class="price_list">
+
+            <div class="container">
+
+               <div class="col-lg-12 mb-3 text-center">
+
+
+
+                  <h2>Price List</h2>
+
+               </div>
+
+               <div class="row justify-content-center mt-lg-5">
+
+                  <div class="col-lg-4 col-md-4 mb-5">
+
+                     <div class="price_list_box me-lg-5 text-center">
+
+                        <div class="price_list_high ">
+
+                           <h3> Apartments</h3>
+
+                        </div>
+
+                        <div class="Price_list_text">
+
+                           <ul>
+
+                              <li class="d-flex align-items-center text-center justify-content-center">
+
+                                 <h5 class="mb-0 fs-4"><b>â¹ 10,250/- sq.ft.</b></h5>
+
+                              </li>
+
+                           </ul>
+
+                        </div>
+
+                        <div class="Price_list_text_highlight mt-4 p-2">
+
+                           <ul>
+
+                              <li class="d-flex align-items-center text-center justify-content-between mb-3">
+
+                                 <h5 class="mb-0 fs-5">Typology :</h5>
+
+                                 <p class="ms-3 fs-4"> <b>Commercial</b></p>
+
+                              </li>
+
+                              <li class="d-flex align-items-center text-center justify-content-between">
+
+                                 <h5 class="mb-0 fs-5">Size :</h5>
+
+                                 <p class="ms-3 fs-4">On Request</p>
+
+                              </li>
+
+                           </ul>
+
+                        </div>
+
+                        <div class="btan btnOpenForm mt-4 position-relative z-2"> <a href="#">Know More <i
+
+                                 class="fa-solid fa-arrow-trend-up ms-2"></i></a>
+
+                        </div>
+
+                     </div>
+
+                  </div>              
+
+               </div>
+
+            </div>
+
+
+
+         </div>
+
+      </div>
+
+
+
+
+
+
+
+      <!--============  price list end ================ -->
+
+
+
+      <div class="highlight_bg" id="highlight-sec">
+
+         <div class="highlight">
+
+            <div class="container">
+
+
+
+               <div class="row align-items-center">
+
+
+
+
+
+                  <div class="col-lg-7">
+
+                     <div class="hilight_wrapp_text mb-5 mb-lg-0 me-lg-4">
+
+                        <div class="col-lg-12 mb-lg-5 mb-4">
+
+
+
+                           <h2>Biigtech Highlights</h2>
+
+                        </div>
+
+                        <div class="highlight_wrapp">
+
+                           <ul>
+
+
+
+                              <li class="d-flex mb-lg-4 mb-2 align-items-center">
+
+                                 <h4><i class="fa-solid fa-arrow-right"></i></h4>
+
+                                 <p class="ms-3"> Offer such as Shopping Centre and Food Court. </li>
+
+                              <li class="d-flex mb-lg-4 mb-2 align-items-center">
+
+                                 <h4><i class="fa-solid fa-arrow-right"></i></h4>
+
+                                 <p class="ms-3">Metro Connectivity nearby </p>
+
+                              </li>
+
+                              
+
+                              <li class="d-flex mb-lg-4 mb-2 align-items-center">
+
+                                 <h4><i class="fa-solid fa-arrow-right"></i></h4>
+
+                                 <p class="ms-3">Maximum footfall nearby</p>
+
+                              </li>
+
+                              <li class="d-flex mb-lg-4 mb-2 align-items-center">
+
+                                 <h4><i class="fa-solid fa-arrow-right"></i></h4>
+
+                                 <p class="ms-3">Lower dependency on a single sector reducing investment risk.</p>
+
+                              </li>
+
+                              
+
+                              <li class="d-flex mb-lg-4 mb-2 align-items-center">
+
+                                 <h4><i class="fa-solid fa-arrow-right"></i></h4>
+
+                                 <p class="ms-3">Diverse economic activities including manufacturing, IT/ITeS and services </p>
+
+                              </li>
+
+                           </ul>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+
+
+
+
+
+                 <div class="col-lg-5">
+
+                     <div class="hghlight_text">
+
+                        <img src="img/highlight.webp" width="100%" alt="Biigtech lcoation map">
+
+                     </div>
+
+                  </div> 
+
+
+
+
+
+
+
+               </div>
+
+            </div>
+
+
+
+         </div>
+
+      </div>
+
+
+
+      <!-- =========== amenities section start =============== -->
+
+      <div class="amenities_bg" id="amenities">
+
+         <div class="amenities_main">
+
+            <div class="container">
+
+               <div class="col-lg-12 mb-5 text-center">
+
+
+
+                  <h2 class="mt-2">Features &amp; Amenities</h2>
+
+               </div>
+
+               <div class="row">
+
+                  <div class="col-lg-3  mb-4 col-6">
+
+                     <div class="amenities_box">
+
+                        <div class="overlay_text p-2">
+
+                           <img src="img/amenities_1.png" width="60" alt="">
+
+                           <h4 class="pt-2">Indoor Games</h4>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+
+
+
+                  <div class="col-lg-3  mb-4 col-6">
+
+                     <div class="amenities_box">
+
+                        <div class="overlay_text p-2">
+
+                           <img src="img/amenities_2.png" width="60" alt="">
+
+                           <h4 class="pt-2">Badminton Court
+
+                           </h4>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+
+
+
+                  <div class="col-lg-3  mb-4 col-6">
+
+                     <div class="amenities_box">
+
+                        <div class="overlay_text p-2">
+
+                           <img src="img/amenities_3.png" width="60" alt="">
+
+                           <h4 class="pt-2">Multiplex </h4>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+
+
+
+                  <div class="col-lg-3  mb-4 col-6">
+
+                     <div class="amenities_box">
+
+                        <div class="overlay_text p-2">
+
+                           <img src="img/amenities_4.png" width="60" alt="">
+
+                           <h4 class="pt-2">Gym </h4>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+
+
+
+                  <div class="col-lg-3  mb-4 col-6">
+
+                     <div class="amenities_box">
+
+                        <div class="overlay_text p-2">
+
+                           <img src="img/amenities_5.png" width="60" alt="">
+
+                           <h4 class="pt-2">Swimming Pool</h4>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+
+
+
+                  <div class="col-lg-3  mb-4 col-6">
+
+                     <div class="amenities_box">
+
+                        <div class="overlay_text p-2">
+
+                           <img src="img/amenities_6.png" width="60" alt="">
+
+                           <h4 class="pt-2">24x7 Security</h4>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+
+
+
+                  <div class="col-lg-3  mb-4 col-6">
+
+                     <div class="amenities_box">
+
+                        <div class="overlay_text p-2">
+
+                           <img src="img/amenities_7.png" width="60" alt="">
+
+                           <h4 class="pt-2">Kid's Play Area</h4>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+
+
+
+                  <div class="col-lg-3  mb-4 col-6">
+
+                     <div class="amenities_box">
+
+                        <div class="overlay_text p-2">
+
+                           <img src="img/amenities_8.png" width="60" alt="">
+
+                           <h4 class="pt-2">Parking
+
+
+
+                           </h4>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+
+
+
+               </div>
+
+            </div>
+
+
+
+         </div>
+
+      </div>
+
+
+
+      <!-- =========== amenities section start =============== -->
+
+
+
+
+
+
+
+
+
+      <!-- ========= floor plan section design ====================== -->
+
+
+
+      <div class="floor_plan" id="floor_plan">
+
+
+
+         <div class="container">
+
+            <div class="col-lg-12 mb-4 text-center">
+
+
+
+               <h2>Floor Plan</h2>
+
+            </div>
+
+            <div class="row justify-content-center align-items-center">
+
+
+
+               <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+
+                  <div data-aos="fade-up" class="aos-init aos-animate">
+
+                     <div class="floor_plan_box">
+
+                        <div class="floor_plan_img">
+
+                           <img src="img/floor-plan.webp" width="100%" height="350" alt="floor_plan_img">
+
+
+
+                           <div class="overlay">
+
+                              <h5><b>FoodCourt</b></h5>
+
+                              <a class="btan btnOpenForm" href="#">View Plan<i
+
+                                    class="fa-solid fa-arrow-trend-up ms-2"></i></a>
+
+                           </div>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+
+               </div>
+
+               <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0" style="margin-top: 10px;">
+
+                  <div data-aos="fade-up" class="aos-init aos-animate">
+
+                     <div class="floor_plan_box">
+
+                        <div class="floor_plan_img">
+
+                           <img src="img/floor-plan.webp" width="100%" height="350" alt="floor_plan_img">
+
+
+
+                           <div class="overlay">
+
+                              <h5><b>Office</b></h5>
+
+                              <a class="btan btnOpenForm" href="#">View Plan<i
+
+                                    class="fa-solid fa-arrow-trend-up ms-2"></i></a>
+
+                           </div>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </div>
+
+      <!-- ========= Location section design ====================== -->
+
+       
+
+      <div class="highlight_bg" id="location-sec">
+
+         <div class="highlight">
+
+            <div class="container">
+
+
+
+               <div class="row align-items-center">
+
+
+
+
+
+                  <div class="col-lg-7">
+
+                     <div class="hilight_wrapp_text mb-5 mb-lg-0 me-lg-4">
+
+                        <div class="col-lg-12 mb-lg-5 mb-4">
+
+
+
+                           <h2>Biigtech Location Map</h2>
+
+                        </div>
+
+                        <div class="highlight_wrapp">
+
+                           <ul>
+
+                              <li class="d-flex mb-lg-4 mb-2 align-items-center">
+
+                                 <h4><i class="fa-solid fa-arrow-right"></i></h4>
+
+                                 <p class="ms-3"> 1 Min. From Sharda University.</li>
+
+                              <li class="d-flex mb-lg-4 mb-2 align-items-center">
+
+                                 <h4><i class="fa-solid fa-arrow-right"></i></h4>
+
+                                 <p class="ms-3">2 Min. India Expo Mart | LG Chowk. </p>
+
+                              </li>
+
+                              
+
+                              <li class="d-flex mb-lg-4 mb-2 align-items-center">
+
+                                 <h4><i class="fa-solid fa-arrow-right"></i></h4>
+
+                                 <p class="ms-3">3 Min. Ministry of Culture Govt. of India
+
+                                 </p>
+
+                              </li>
+
+                              <li class="d-flex mb-lg-4 mb-2 align-items-center">
+
+                                 <h4><i class="fa-solid fa-arrow-right"></i></h4>
+
+                                 <p class="ms-3">5 Min. Yamuna Expressway.</p>
+
+                              </li>
+
+                              
+
+                              <li class="d-flex mb-lg-4 mb-2 align-items-center">
+
+                                 <h4><i class="fa-solid fa-arrow-right"></i></h4>
+
+                                 <p class="ms-3">10 Min. F1-Racing Track | FNG Expressway.</p>
+
+                              </li>
+
+                           </ul>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+
+
+
+
+
+                 <div class="col-lg-5">
+
+                     <div class="hghlight_text">
+
+                        <img src="img/loc-map.webp" width="100%" alt="">
+
+                     </div>
+
+                  </div> 
+
+
+
+
+
+
+
+               </div>
+
+            </div>
+
+
+
+         </div>
+
+      </div>
+
+
+
+
+
+      <!-- ====== highlight section design ======== -->
+
+   </main>
+
+  <footer>
+
+      <div class="footer_bg" id="contectus">
+
+         <div class="footer">
+
+            <div class="container">
+
+               <!-- <div class="col-lg-12 text-center mb-5"> <img src="img/logo.webp" width="150" alt=""> </div> -->
+
+               <div class="row justify-content-center">
+
+                  <div class="col-lg-6 col-md-6 mb-4">
+
+                     <div class="footer_contant">
+
+                        <h3>About Biigtech Group</h3>
+
+                        <p class="mb-3 mt-3 col-lg-11">Led by promoters with decades of rich experience in real estate and construction, Biigtech stands on a strong foundation of trust, expertise, and excellence. Their deep industry knowledge and unwavering commitment to quality have shaped projects that inspire and endure.
+
+                           At Biigtech, every milestone you see on the outside is powered by passion, innovation, and teamwork on the inside. Behind the Biigtech is where dreams are designed, plans take shape, and ideas transform into iconic spaces.</p>
+
+                        <div class="contact_us mt-5">
+
+                           <ul class="d-flex align-items-center">
+
+                              <li><a href="tel:7065884555">
+
+                                    <i class="fa-solid fa-phone-volume"></i></a></li>
+
+                              <li class="ms-3">
+
+                                 <p class="pb-1">Call Us Anytime</p> <a href="tel:7065884555"><span>7065884555</span></a>
+
+                              </li>
+
+                           </ul>
+
+                        </div>
+
+
+
+                     </div>
+
+                  </div>
+
+                  <div class="col-lg-6 col-md-6 mb-4">
+
+                     <div class="contect-form">
+
+                        <form method="post" action="inquiry.php" autocomplete="off" class="contact-form banner_form" id="submitform">
+
+                           <div class="form_section text-center">
+
+                              <div class="form_text">
+
+                                 <h3 class="form_title mb-2"> Schedule A Site Visit</h3>
+
+
+
+                              </div>
+
+                              <div class="mb-4 position-relative">
+
+                                 <input type="text" id="qname" name="qname" class="form-control text_form" placeholder="Enter Your Name" required="">
+
+                                 <span class="icon-inside"><i class="fas fa-user"></i></span>
+
+                              </div>
+
+                              <div class="mb-4 position-relative">
+
+                                 <input type="email" id="qemail" name="qemail" class="form-control text_form email-address mb-4" placeholder="Enter Your Email" required="">
+
+                                 <span class="icon-inside"><i class="fas fa-envelope"></i></span>
+
+                              </div>
+
+                              <div class="mb-4 position-relative">
+
+                                 <input type="text" id="qphone" name="qphone" oninput="this.value = this.value.replace(/[^0-9]/g, '')" class="form-control text_form number-only mb-4" placeholder="Enter Your Number" required="">
+
+                                 <span class="icon-inside"><i class="fa-solid fa-phone"></i></span>
+
+                              </div>
+
+                              <input type="text" class="form-control text_form number-only mb-4" name="qdesc" id="qdesc" placeholder="Enter Your City*" name="city" required="">  
+
+                              <!-- <input type="hidden" name="" id="ip" value="49.249.44.18"> -->
+
+                              <div class="col-lg-12 form-group">
+
+                                 <div class="advanced-button">
+
+                                    <!-- <input type="button" name="submit" class="header_phone theme_button" id="SubmitQuerytop" onclick="contactusbutton4()"> -->
+
+                                    <button class="header_phone theme_button" type="submit" id="SubmitQuerytop">GET CALL
+
+                                       BACK</button> 
+
+                                 </div>
+
+                              </div>
+
+                              <div class="form-response"></div>
+
+                           </div>
+
+                        </form>
+
+                     </div>
+
+                  </div>
+
+               </div>
+
+               
+
+            </div>
+
+         </div>
+
+      </div>
+
+      <div class="footer-bootom">
+
+         <div class="footer_b mt-5">
+
+            <div class="col-sm-12 text-center box">
+
+               <p style="text-align: center;"> Project Rera : UPRERAPRJ656513/08/2025</p>
+
+               <p style="color: #000;" class="col-lg-11 information-web"><b> Disclaimer:</b> The content is for information purposes only and does not constitute an offer to avail of any service. Prices mentioned are subject to change without notice and properties mentioned are subject to availability. Images for representation purpose only. This is not the official website. Website maintained by our online marketing agency pact partners. We may share data with rera registered brokers/companies for further processing. We may also send updates to the mobile number/email id registered with us.
+
+               </p>
+
+               <p style="text-align: center;">
+
+                  <strong><a href="disclaimer.html" target="_blank"><span style="color: #000000;">Privacy Policy</span></a></strong></p>
+
+
+
+            </div>
+
+         </div>
+
+         
+
+      </div>
+
+   </footer>
+
+   <!-- ===============footer section start========================== -->
+
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/jquery%403.7.1/dist/jquery.min.js"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"
+
+      integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ=="
+
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+   <script src="js/aos.js"></script>
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/popper.js%401.16.0/dist/umd/popper.min.js"
+
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+
+      crossorigin="anonymous"></script>
+
+   <script src="js/bootstrap.min.js"
+
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+
+      crossorigin="anonymous"></script>
+
+   <!-- <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script> -->
+
+   <script src="js/main.js"></script>
+
+
+
+   <script src="js/custom.html"></script>
+
+   <script type="application/javascript" src="https://api.ipify.org/?format=jsonp&amp;callback=getIP"> </script>
+
+   <script>
+
+      function getIP(json) {
+
+          
+
+          var ip = json.ip;
+
+      
+
+          document.getElementById('ip').value=ip;
+
+        
+
+      }
+
+      
+
+   var searchParams = new URLSearchParams(window.location.search);
+
+        var utm_source = searchParams.get('source');
+
+        var utm_term = searchParams.get('keyword');
+
+        var utm_medium = searchParams.get('creative');
+
+        var utm_campaignID = searchParams.get('campaignid');
+
+        var gclid = searchParams.get('gclid');
+
+        
+
+        
+
+        if (utm_source == '' || utm_source == null){
+
+            utm_source = "XD";
+
+        }
+
+      </script>
+
+  <script>
+
+      function proprtyForm(titlehoem) {
+
+         $('#prog550688').val(titlehoem);
+
+         $('#enquireModalLabel').text(titlehoem);
+
+         $('#enquireModal').modal('show');
+
+      }
+
+
+
+
+
+      $(document).ready(function () {
+
+         setTimeout(() => {
+
+            $('#newlaunchModal').modal('show')
+
+         }, 1000);
+
+      })
+
+   </script>
+
+</body>
+
+
+
+<!-- Mirrored from rggroup.net.in/pleiaddes/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 07:02:58 GMT -->
+
+</html>
