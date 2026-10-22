@@ -3669,3 +3669,100 @@ html, body {
   border-radius: 12px !important;
   display: block !important;
 }
+
+/* Apply Now Button Styling - Rich Gold with Sharp Dark Text */
+.job-apply-btn {
+  background: linear-gradient(135deg, #D4A62A 0%, #C6A15B 100%) !important;
+  color: #073B3A !important;
+  border: 1.5px solid #B88F20 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.3px !important;
+}
+
+.job-apply-btn span,
+.job-apply-btn i {
+  color: #073B3A !important;
+  font-weight: 800 !important;
+}
+
+.job-apply-btn:hover {
+  background: linear-gradient(135deg, #E5B83B 0%, #D4A62A 100%) !important;
+  color: #000000 !important;
+}
+
+.job-apply-btn:hover span,
+.job-apply-btn:hover i {
+  color: #000000 !important;
+}
+
+
+/* ========================================================
+   CAREER PORTAL JOB FORM INPUTS (NEVER OVERLAP)
+   ======================================================== */
+.portal-card .input-icon-wrap,
+.input-icon-wrap {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+.portal-card .input-icon-wrap > i,
+.portal-card .input-icon-wrap .input-icon,
+.input-icon-wrap > i,
+.input-icon-wrap .input-icon {
+  position: absolute !important;
+  left: 16px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  color: #006B64 !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+  pointer-events: none !important;
+  z-index: 5 !important;
+  transition: color 0.2s ease, transform 0.2s ease !important;
+}
+
+.portal-card .input-icon-wrap:focus-within > i,
+.portal-card .input-icon-wrap:focus-within .input-icon,
+.input-icon-wrap:focus-within > i,
+.input-icon-wrap:focus-within .input-icon {
+  color: #D4A62A !important;
+  transform: translateY(-50%) scale(1.1) !important;
+}
+
+.portal-card .job-input,
+.portal-card .job-select,
+input.job-input,
+select.job-select {
+  display: block !important;
+  width: 100% !important;
+  height: 52px !important;
+  line-height: 52px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 50px !important; /* 50px Left Padding guarantees 16px icon + 34px generous space: ZERO OVERLAP */
+  padding-right: 18px !important;
+  font-size: 15px !important;
+  color: #1E293B !important;
+  background: #F8FAFC !important;
+  border: 1.5px solid #CBD5E1 !important;
+  border-radius: 10px !important;
+  outline: none !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+  transition: all 0.25s ease !important;
+}
+
+.portal-card .job-input:focus,
+.portal-card .job-select:focus,
+input.job-input:focus,
+select.job-select:focus {
+  background: #FFFFFF !important;
+  border-color: #006B64 !important;
+  box-shadow: 0 0 0 3.5px rgba(0, 107, 100, 0.16) !important;
+}
+
+.portal-card .job-input::placeholder,
+input.job-input::placeholder {
+  color: #94A3B8 !important;
+  font-size: 14.5px !important;
+}
