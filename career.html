@@ -34,7 +34,7 @@
     <link href="assets/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/css/nice-select.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-        <link href="assets/css/premium-theme.css?v=10.0" rel="stylesheet">
+        <link href="assets/css/premium-theme.css?v=12.0" rel="stylesheet">
     <link rel="canonical" href="career.html" />
 
 
@@ -1234,7 +1234,7 @@
     //     }, false);
 
     //   const properties = [{
-    //             message: "Shekhar just bought a 4 BHK in Godrej Aristocrat.",
+    //             message: "Shekhar just bought an apartment in ACE ARTE.",
     //             image: "../assets/img/projectdetails/godrejaristocrat2.jpg",
     //             time: "Just now"
 
@@ -1617,26 +1617,39 @@
             border-radius: 4px;
         }
         .job-apply-btn {
-            background: linear-gradient(135deg, #073B3A 0%, #006B64 100%);
-            color: #FFFFFF !important;
-            border: 1.5px solid #D4A62A;
-            padding: 9px 22px;
-            border-radius: 8px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 13px;
-            font-weight: 750;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            background: linear-gradient(135deg, #D4A62A 0%, #C6A15B 100%) !important;
+            color: #073B3A !important; /* Bold Dark Green/Charcoal Text */
+            border: 1.5px solid #B88F20 !important;
+            padding: 10px 24px !important;
+            border-radius: 8px !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 13.5px !important;
+            font-weight: 800 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
             text-decoration: none !important;
-            transition: all 0.25s ease;
-            box-shadow: 0 4px 12px rgba(7, 59, 58, 0.15);
+            transition: all 0.25s ease !important;
+            box-shadow: 0 4px 14px rgba(212, 166, 42, 0.3) !important;
+            letter-spacing: 0.3px !important;
+        }
+        .job-apply-btn span {
+            color: #073B3A !important; /* Dark text */
+            font-weight: 800 !important;
+        }
+        .job-apply-btn i {
+            color: #073B3A !important;
+            font-weight: 800 !important;
         }
         .job-apply-btn:hover {
-            background: linear-gradient(135deg, #042423 0%, #073B3A 100%);
-            color: #D4A62A !important;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(7, 59, 58, 0.25);
+            background: linear-gradient(135deg, #E5B83B 0%, #D4A62A 100%) !important;
+            color: #000000 !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(212, 166, 42, 0.45) !important;
+        }
+        .job-apply-btn:hover span,
+        .job-apply-btn:hover i {
+            color: #000000 !important;
         }
 
         /* 4. Hiring Steps */
@@ -1768,6 +1781,27 @@
                 </div>
             </div>
         </section>
+
+        <!-- Application Submission Success Notification Banner -->
+        <div id="applicationSuccessBanner" style="display:none; margin: 30px auto 10px; max-width: 960px; padding: 0 15px;">
+            <div style="background: linear-gradient(135deg, #073B3A 0%, #005F58 100%); border: 2px solid #C6A15B; border-radius: 16px; padding: 32px 24px; color: #FFFFFF; text-align: center; box-shadow: 0 12px 35px rgba(7, 59, 58, 0.25);">
+                <div style="width: 58px; height: 58px; background: rgba(212, 166, 42, 0.2); border: 2px solid #D4A62A; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+                    <i class="bi bi-check-lg" style="font-size: 32px; color: #D4A62A;"></i>
+                </div>
+                <h3 style="color: #FFFFFF; font-size: 24px; font-weight: 700; margin-bottom: 10px; letter-spacing: 0.3px;">Application & Resume Submitted Successfully!</h3>
+                <p style="color: #E3E7E4; font-size: 15px; max-width: 620px; margin: 0 auto 20px; line-height: 1.65;">
+                    Thank you for applying to Realty Vault Consulting. Your application and attached resume have been dispatched to <strong>realestaterealtyvault@gmail.com</strong>. Our HR & Talent Acquisition desk will review your profile and contact you shortly.
+                </p>
+                <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:+917065884555" style="display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, #D4A62A 0%, #C6A15B 100%); color: #073B3A; font-weight: 700; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 14px;">
+                        <i class="bi bi-telephone-fill"></i> HR Desk: 70658 84555
+                    </a>
+                    <a href="https://wa.me/917065884555?text=Hi%2C%20I%20have%20submitted%20my%20job%20application%20on%20Realty%20Vault" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; background: #25D366; color: #FFFFFF; font-weight: 700; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 14px;">
+                        <i class="bi bi-whatsapp"></i> WhatsApp HR Team
+                    </a>
+                </div>
+            </div>
+        </div>
 
         <!-- 2. WHY BUILD A CAREER AT REALTY VAULT -->
         <section class="career-perks-section">
@@ -2488,6 +2522,22 @@
     </script>
     <script src="assets/js/header-contact.js"></script>
     <script src="assets/js/cursor-3d.js?v=3.5"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                const params = new URLSearchParams(window.location.search);
+                if (params.get('submitted') === 'success') {
+                    const banner = document.getElementById('applicationSuccessBanner');
+                    if (banner) {
+                        banner.style.display = 'block';
+                        banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            } catch(e) {}
+        });
+    </script>
+
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'sg2plzcpnl504346'},{'dcenter':'sg2'},{'cp_id':'9754857'},{'cp_cache':''},{'cp_cl':'8'}) 
 // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.

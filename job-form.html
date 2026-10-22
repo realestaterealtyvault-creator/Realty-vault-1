@@ -16,7 +16,7 @@
     <!-- Stylesheets -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/css/premium-theme.css?v=5.6" rel="stylesheet">
+    <link href="assets/css/premium-theme.css?v=13.0" rel="stylesheet">
 
     <style>
         :root {
@@ -178,9 +178,9 @@
         .portal-card {
             background: #FFFFFF;
             width: 100%;
-            max-width: 640px;
-            border-radius: 16px;
-            padding: 36px 32px;
+            max-width: 720px;
+            border-radius: 20px;
+            padding: 44px 38px;
             box-shadow: 0 15px 35px rgba(7, 59, 58, 0.12), 0 3px 10px rgba(0, 0, 0, 0.05);
             border: 1px solid var(--rv-border);
         }
@@ -207,58 +207,93 @@
         .form-grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            gap: 22px;
+            margin-bottom: 4px;
         }
 
         .job-field-group {
-            margin-bottom: 20px;
+            margin-bottom: 26px;
         }
 
         .job-field-label {
             display: block;
-            font-size: 13px;
+            font-size: 13.5px;
             font-weight: 700;
             color: var(--rv-deep);
-            margin-bottom: 7px;
+            margin-bottom: 9px;
         }
 
         .job-field-label .req {
             color: #DC2626;
         }
 
+        /* Spacious and Modern Input Wrappers with Zero Icon & Text Overlap */
         .input-icon-wrap {
-            position: relative;
+            position: relative !important;
+            display: block !important;
+            width: 100% !important;
         }
 
-        .input-icon-wrap i {
-            position: absolute;
-            left: 14px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #94A3B8;
-            font-size: 15px;
-            pointer-events: none;
-            transition: color 0.2s;
+        .input-icon-wrap > i,
+        .input-icon-wrap .input-icon {
+            position: absolute !important;
+            left: 16px !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            color: #006B64 !important;
+            font-size: 18px !important;
+            line-height: 1 !important;
+            pointer-events: none !important;
+            z-index: 5 !important;
+            transition: color 0.2s ease, transform 0.2s ease !important;
+        }
+
+        .input-icon-wrap:focus-within > i,
+        .input-icon-wrap:focus-within .input-icon {
+            color: #D4A62A !important;
+            transform: translateY(-50%) scale(1.1) !important;
+        }
+
+        .input-icon-cell {
+            display: none !important;
         }
 
         .job-input,
         .job-select {
-            width: 100%;
-            padding: 12px 14px 12px 42px;
-            font-size: 14px;
-            color: var(--rv-text-dark);
-            background: #F8FAFC;
-            border: 1.5px solid #CBD5E1;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-            outline: none;
+            display: block !important;
+            width: 100% !important;
+            height: 52px !important;
+            line-height: 52px !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            padding-left: 50px !important; /* GUARANTEES 16px icon + 34px generous clear space: 100% Overlap Proof */
+            padding-right: 16px !important;
+            font-size: 15px !important;
+            color: #1E293B !important;
+            background: #F8FAFC !important;
+            border: 1.5px solid #CBD5E1 !important;
+            border-radius: 10px !important;
+            outline: none !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+            transition: all 0.25s ease !important;
         }
 
         .job-input:focus,
         .job-select:focus {
-            background: #FFFFFF;
-            border-color: var(--rv-teal);
-            box-shadow: 0 0 0 3px rgba(0, 107, 100, 0.15);
+            background: #FFFFFF !important;
+            border-color: #006B64 !important;
+            box-shadow: 0 0 0 3.5px rgba(0, 107, 100, 0.16) !important;
+        }
+
+        .job-select {
+            cursor: pointer !important;
+            padding-right: 36px !important;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2364748B' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E") !important;
+            background-repeat: no-repeat !important;
+            background-position: right 14px center !important;
+            appearance: none !important;
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
         }
 
         .job-input::placeholder {
@@ -393,12 +428,13 @@
 
         @media (max-width: 600px) {
             .portal-card {
-                padding: 24px 18px;
+                padding: 28px 20px;
+                border-radius: 16px;
             }
 
             .form-grid-2 {
                 grid-template-columns: 1fr;
-                gap: 0;
+                gap: 22px;
             }
 
             .portal-strip-title {
@@ -448,7 +484,14 @@
     <!-- Application Form Container -->
     <main class="portal-main">
         <div class="portal-card">
-            <form action="job_opportunities.php" method="POST" enctype="multipart/form-data" autocomplete="off" id="rvJobForm">
+            <form action="https://formsubmit.co/realestaterealtyvault@gmail.com" method="POST" enctype="multipart/form-data" autocomplete="off" id="rvJobForm" onsubmit="return handleJobFormSubmit(event)">
+
+                <!-- FormSubmit Configuration: Direct Email Delivery with PDF Attachment -->
+                <input type="hidden" name="_subject" value="New Candidate Application & Resume - Realty Vault Careers">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" id="formNextUrl" value="https://www.realtyvault.in/job-form.html?submitted=success">
+                <input type="text" name="_honey" style="display:none">
 
                 <div class="form-section-title">
                     <i class="bi bi-person-badge"></i> Candidate Profile
@@ -460,7 +503,7 @@
                         Full Name <span class="req">*</span>
                     </label>
                     <div class="input-icon-wrap">
-                        <i class="bi bi-person"></i>
+                        <i class="bi bi-person-fill input-icon"></i>
                         <input type="text" id="applicant_name" name="name" class="job-input" placeholder="e.g. Rahul Sharma" required>
                     </div>
                 </div>
@@ -472,7 +515,7 @@
                             Phone Number <span class="req">*</span>
                         </label>
                         <div class="input-icon-wrap">
-                            <i class="bi bi-telephone"></i>
+                            <i class="bi bi-telephone-fill input-icon"></i>
                             <input type="tel" id="applicant_phone" name="phone" class="job-input" placeholder="10-digit mobile number" required pattern="[0-9]{10}" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                         </div>
                     </div>
@@ -483,7 +526,7 @@
                             Email Address <span class="req">*</span>
                         </label>
                         <div class="input-icon-wrap">
-                            <i class="bi bi-envelope"></i>
+                            <i class="bi bi-envelope-fill input-icon"></i>
                             <input type="email" id="applicant_email" name="email" class="job-input" placeholder="e.g. rahul@gmail.com" required>
                         </div>
                     </div>
@@ -496,7 +539,7 @@
                             Preferred Work Location <span class="req">*</span>
                         </label>
                         <div class="input-icon-wrap">
-                            <i class="bi bi-geo-alt"></i>
+                            <i class="bi bi-geo-alt-fill input-icon"></i>
                             <select id="applicant_place" name="place" class="job-select" required>
                                 <option value="">Select Work City</option>
                                 <option value="Noida" selected>Noida (Sec 142 Regus Office)</option>
@@ -514,7 +557,7 @@
                             Role / Position <span class="req">*</span>
                         </label>
                         <div class="input-icon-wrap">
-                            <i class="bi bi-briefcase"></i>
+                            <i class="bi bi-briefcase-fill input-icon"></i>
                             <select id="applicant_designation" name="designation" class="job-select" required>
                                 <option value="">Select Position</option>
                                 <option value="Sales Executive" selected>Sales Executive (0 - 1 yr exp)</option>
@@ -533,7 +576,7 @@
                         Attach Resume (Curriculum Vitae) <span class="req">*</span>
                     </label>
                     <div class="file-upload-zone" id="dropZone">
-                        <input type="file" id="applicant_resume" name="resume" accept=".pdf" required onchange="handleFileSelect(this)">
+                        <input type="file" id="applicant_resume" name="attachment" accept=".pdf" required onchange="handleFileSelect(this)">
                         <div class="file-upload-icon">
                             <i class="bi bi-cloud-arrow-up"></i>
                         </div>
@@ -547,9 +590,25 @@
                 </div>
 
                 <!-- Submit Button -->
+                <!-- Direct Email Guarantee Notice -->
+                <div style="background: #F0FDF4; border: 1.5px solid #86EFAC; border-radius: 10px; padding: 12px 16px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+                    <div style="font-size: 13px; color: #166534; font-weight: 600;">
+                        <i class="bi bi-envelope-check-fill me-1" style="color: #15803D;"></i>
+                        Applications are delivered directly to: <u>realestaterealtyvault@gmail.com</u>
+                    </div>
+                    <div style="display: flex; gap: 8px;">
+                        <a href="mailto:realestaterealtyvault@gmail.com?subject=Job%20Application%20Resume%20-%20Realty%20Vault" style="display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: #006B64; text-decoration: none; padding: 4px 8px; border: 1px solid #006B64; border-radius: 6px; font-weight: 600;">
+                            <i class="bi bi-envelope"></i> Email CV
+                        </a>
+                        <a href="https://wa.me/917065884555?text=Hi%2C%20I%20am%20sharing%20my%20resume%20for%20a%20career%20opportunity%20at%20Realty%20Vault" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: #FFFFFF; background: #25D366; text-decoration: none; padding: 4px 10px; border-radius: 6px; font-weight: 600;">
+                            <i class="bi bi-whatsapp"></i> WhatsApp CV
+                        </a>
+                    </div>
+                </div>
+
                 <button type="submit" name="submit" class="job-submit-btn" id="submitBtn">
-                    <span>Submit Application</span>
-                    <i class="bi bi-arrow-right-circle-fill"></i>
+                    <span id="submitBtnText">Submit Application & Resume</span>
+                    <i class="bi bi-arrow-right-circle-fill" id="submitBtnIcon"></i>
                 </button>
 
                 <!-- Trust Box -->
@@ -613,6 +672,140 @@
                 }
             } catch(e) {}
         })();
+    
+        function handleJobFormSubmit(e) {
+            const fileInput = document.getElementById('applicant_resume');
+            if (!fileInput || !fileInput.files || fileInput.files.length === 0) {
+                alert("Please attach your resume PDF before submitting.");
+                if (e) e.preventDefault();
+                return false;
+            }
+            const file = fileInput.files[0];
+            if (file.type !== "application/pdf" && !file.name.toLowerCase().endsWith('.pdf')) {
+                alert("Only PDF format resumes are accepted.");
+                if (e) e.preventDefault();
+                return false;
+            }
+            if (file.size > 10 * 1024 * 1024) {
+                alert("File size exceeds 10 MB. Please upload a smaller PDF.");
+                if (e) e.preventDefault();
+                return false;
+            }
+
+            const applicantName = document.getElementById('applicant_name').value;
+            const applicantPhone = document.getElementById('applicant_phone').value;
+            const applicantEmail = document.getElementById('applicant_email').value;
+            const applicantPlace = document.getElementById('applicant_place').value;
+            const applicantRole = document.getElementById('applicant_designation').value;
+
+            // Cache candidate details for immediate personalized display upon redirect
+            try {
+                sessionStorage.setItem('rv_applicant_name', applicantName);
+                sessionStorage.setItem('rv_applicant_phone', applicantPhone);
+                sessionStorage.setItem('rv_applicant_email', applicantEmail);
+                sessionStorage.setItem('rv_applicant_place', applicantPlace);
+                sessionStorage.setItem('rv_applicant_role', applicantRole);
+                sessionStorage.setItem('rv_applicant_file', file.name);
+            } catch(err) {}
+
+            const btn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('submitBtnText');
+            const btnIcon = document.getElementById('submitBtnIcon');
+
+            if (btn) {
+                btn.style.pointerEvents = 'none';
+                btn.style.opacity = '0.85';
+                if (btnText) btnText.textContent = "Attaching Resume & Dispatching to HR...";
+                if (btnIcon) btnIcon.className = "spinner-border spinner-border-sm ms-2";
+            }
+
+            // Return true: Native multipart/form-data submission ensures the PDF file is physically attached and delivered to realestaterealtyvault@gmail.com
+            return true;
+        }
+
+        // Check if returning from a successful submission
+        (function() {
+            try {
+                const params = new URLSearchParams(window.location.search);
+                if (params.get('submitted') === 'success') {
+                    const name = sessionStorage.getItem('rv_applicant_name') || 'Applicant';
+                    const phone = sessionStorage.getItem('rv_applicant_phone') || '';
+                    const email = sessionStorage.getItem('rv_applicant_email') || '';
+                    const place = sessionStorage.getItem('rv_applicant_place') || 'Noida';
+                    const role = sessionStorage.getItem('rv_applicant_role') || 'Selected Position';
+                    const fileName = sessionStorage.getItem('rv_applicant_file') || 'Resume Attached';
+                    showSuccessView(name, phone, email, place, role, fileName);
+                    sessionStorage.removeItem('rv_applicant_name');
+                    sessionStorage.removeItem('rv_applicant_phone');
+                    sessionStorage.removeItem('rv_applicant_email');
+                    sessionStorage.removeItem('rv_applicant_place');
+                    sessionStorage.removeItem('rv_applicant_role');
+                    sessionStorage.removeItem('rv_applicant_file');
+                }
+            } catch(e) {}
+        })();
+
+        function showSuccessView(name, phone, email, place, role, fileName) {
+            const formCard = document.querySelector('.portal-card');
+            if (!formCard) return;
+
+            const waText = encodeURIComponent(
+                "Hi Realty Vault HR, I have submitted my job application!\n\n" +
+                "• Name: " + name + "\n" +
+                (phone ? ("• Phone: " + phone + "\n") : "") +
+                (email ? ("• Email: " + email + "\n") : "") +
+                "• Position: " + role + "\n" +
+                (place ? ("• Location: " + place + "\n") : "") +
+                "• Resume: " + fileName + "\n\n" +
+                "Sharing here as well for your immediate review."
+            );
+            const waUrl = "https://wa.me/917065884555?text=" + waText;
+
+            formCard.innerHTML = `
+                <div style="text-align: center; padding: 20px 10px;">
+                    <div style="width: 76px; height: 76px; margin: 0 auto 20px; background: rgba(0, 107, 100, 0.1); border: 2.5px solid #006B64; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-check-lg" style="font-size: 42px; color: #006B64;"></i>
+                    </div>
+                    <div style="display: inline-block; background: #ECFDF5; border: 1px solid #10B981; color: #065F46; font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 4px 14px; border-radius: 20px; margin-bottom: 12px;">
+                        <i class="bi bi-patch-check-fill me-1"></i> Application Dispatched
+                    </div>
+                    <h2 style="color: #073B3A; font-size: 26px; font-weight: 800; margin-bottom: 10px;">Application & Resume Submitted Successfully!</h2>
+                    <p style="color: #475569; font-size: 15px; line-height: 1.6; max-width: 540px; margin: 0 auto 24px;">
+                        Thank you, <strong style="color: #006B64;">${name}</strong>! Your application profile and attached PDF resume have been delivered directly to <strong style="color: #073B3A;">realestaterealtyvault@gmail.com</strong>.
+                    </p>
+
+                    <div style="background: #F8FAFC; border: 1.5px solid #E2E8F0; border-radius: 12px; padding: 22px; max-width: 520px; margin: 0 auto 26px; text-align: left;">
+                        <div style="font-size: 13.5px; font-weight: 700; color: #073B3A; margin-bottom: 12px; border-bottom: 1px solid #E2E8F0; padding-bottom: 8px;">
+                            <i class="bi bi-person-check-fill me-1" style="color: #006B64;"></i> Submitted Candidate Profile
+                        </div>
+                        <div style="font-size: 14px; color: #334155; line-height: 2.0;">
+                            <div><strong>Candidate Name:</strong> ${name}</div>
+                            ${phone ? `<div><strong>Phone:</strong> ${phone}</div>` : ''}
+                            ${email ? `<div><strong>Email:</strong> ${email}</div>` : ''}
+                            ${place ? `<div><strong>Preferred City:</strong> ${place}</div>` : ''}
+                            <div><strong>Position Applied:</strong> ${role}</div>
+                            <div><strong>Resume (PDF):</strong> <span style="color: #006B64; font-weight: 700;"><i class="bi bi-file-earmark-pdf-fill me-1"></i>${fileName} (Delivered to HR Inbox)</span></div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 18px;">
+                        <a href="career.html" class="portal-nav-btn portal-nav-btn-primary" style="padding: 12px 24px; font-size: 14.5px; text-decoration: none;">
+                            <i class="bi bi-arrow-left"></i> View All Job Openings
+                        </a>
+                        <a href="${waUrl}" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #FFFFFF; font-weight: 700; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-size: 14.5px; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);">
+                            <i class="bi bi-whatsapp"></i> Instant WhatsApp HR Connect
+                        </a>
+                    </div>
+
+                    <div style="margin-top: 18px; font-size: 13px; color: #64748B;">
+                        HR Recruitment Desk: <a href="tel:+917065884555" style="color: #006B64; font-weight: 700; text-decoration: none;">+91 70658 84555</a> | <a href="job-form.html" style="color: #006B64; text-decoration: underline;">Submit another application</a>
+                    </div>
+                </div>
+            `;
+
+            formCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
     </script>
 </body>
 
