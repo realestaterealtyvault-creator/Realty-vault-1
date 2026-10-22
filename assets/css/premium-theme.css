@@ -3803,3 +3803,113 @@ input.job-input::placeholder {
 .gallery-video-card img {
   transition: transform 0.5s ease, filter 0.3s ease !important;
 }
+
+
+/* ========================================================
+   CENTERED YOUTUBE VIDEO MODAL (DESKTOP & MOBILE)
+   ======================================================== */
+.rv-video-modal-backdrop {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(3, 20, 20, 0.88) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  z-index: 999999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 16px !important;
+  box-sizing: border-box !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s ease !important;
+}
+
+.rv-video-modal-backdrop.is-active {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.rv-video-modal-dialog {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 420px !important;
+  height: 85vh !important;
+  max-height: 720px !important;
+  background: #000000 !important;
+  border-radius: 18px !important;
+  border: 2px solid rgba(212, 166, 42, 0.65) !important;
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.75), 0 0 45px rgba(212, 166, 42, 0.25) !important;
+  overflow: visible !important;
+  display: flex !important;
+  flex-direction: column !important;
+  transform: scale(0.9) translateY(15px);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.rv-video-modal-backdrop.is-active .rv-video-modal-dialog {
+  transform: scale(1) translateY(0) !important;
+}
+
+.rv-video-modal-frame-wrap {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  background: #000000 !important;
+}
+
+.rv-video-modal-frame-wrap iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  display: block !important;
+}
+
+.rv-video-modal-close {
+  position: absolute !important;
+  top: -16px !important;
+  right: -16px !important;
+  width: 44px !important;
+  height: 44px !important;
+  background: linear-gradient(135deg, #D4A62A 0%, #B88F20 100%) !important;
+  color: #073B3A !important;
+  border: 2px solid #FFFFFF !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 19px !important;
+  cursor: pointer !important;
+  z-index: 1000000 !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5) !important;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease !important;
+}
+
+.rv-video-modal-close:hover {
+  transform: scale(1.15) rotate(90deg) !important;
+  background: #FFFFFF !important;
+  color: #DC2626 !important;
+}
+
+@media (max-width: 600px) {
+  .rv-video-modal-dialog {
+    max-width: 92vw !important;
+    height: 80vh !important;
+    max-height: 580px !important;
+  }
+  
+  .rv-video-modal-close {
+    top: -14px !important;
+    right: -8px !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 16px !important;
+  }
+}
