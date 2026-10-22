@@ -35,7 +35,7 @@
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
         <link href="assets/css/bootstrap-icons.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
-        <link href="assets/css/premium-theme.css?v=14.0" rel="stylesheet">
+        <link href="assets/css/premium-theme.css?v=15.0" rel="stylesheet">
         <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
         <link href="assets/css/nice-select.css" rel="stylesheet">
 
@@ -3210,7 +3210,7 @@
                                 <!-- Slide 4 (NEW: YouTube Short 1) -->
                                 <div class="swiper-slide">
                                     <div class="single-team-card gallery-video-card">
-                                        <a href="https://www.youtube.com/watch?v=QyTTMs9TEEc" class="video-popup gallery-video-link" aria-label="Watch Life at RealtyVault Short on YouTube" style="display: block; position: relative; overflow: hidden; border-radius: 12px; height: 280px; text-decoration: none;">
+                                        <a href="https://www.youtube.com/watch?v=QyTTMs9TEEc" class="rv-video-modal-trigger gallery-video-link" data-video-id="QyTTMs9TEEc" role="button" aria-label="Watch Life at RealtyVault Short on YouTube" style="display: block; position: relative; overflow: hidden; border-radius: 12px; height: 280px; text-decoration: none;">
                                             <img loading="lazy" alt="Life at RealtyVault - YouTube Video" src="assets/img/gallery/gallery-video-1.webp?v=1.0" class="team-img" style="width: 100%; height: 280px; object-fit: cover; border-radius: 12px; display: block;">
                                             <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,59,58,0.25) 0%, rgba(0,0,0,0.65) 100%); border-radius: 12px; display: flex; flex-direction: column; justify-content: space-between; padding: 14px; transition: all 0.3s ease;">
                                                 <div style="display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; background: rgba(0,0,0,0.65); backdrop-filter: blur(4px); padding: 4px 10px; border-radius: 20px; font-size: 11.5px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.3px;">
@@ -3285,7 +3285,7 @@
                                 <!-- Slide 11 (NEW: YouTube Short 2) -->
                                 <div class="swiper-slide">
                                     <div class="single-team-card gallery-video-card">
-                                        <a href="https://www.youtube.com/watch?v=c8VgRQZp3oc" class="video-popup gallery-video-link" aria-label="Watch Life at RealtyVault Short on YouTube" style="display: block; position: relative; overflow: hidden; border-radius: 12px; height: 280px; text-decoration: none;">
+                                        <a href="https://www.youtube.com/watch?v=c8VgRQZp3oc" class="rv-video-modal-trigger gallery-video-link" data-video-id="c8VgRQZp3oc" role="button" aria-label="Watch Life at RealtyVault Short on YouTube" style="display: block; position: relative; overflow: hidden; border-radius: 12px; height: 280px; text-decoration: none;">
                                             <img loading="lazy" alt="Life at RealtyVault - YouTube Video" src="assets/img/gallery/gallery-video-2.webp?v=1.0" class="team-img" style="width: 100%; height: 280px; object-fit: cover; border-radius: 12px; display: block;">
                                             <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,59,58,0.25) 0%, rgba(0,0,0,0.65) 100%); border-radius: 12px; display: flex; flex-direction: column; justify-content: space-between; padding: 14px; transition: all 0.3s ease;">
                                                 <div style="display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; background: rgba(0,0,0,0.65); backdrop-filter: blur(4px); padding: 4px 10px; border-radius: 20px; font-size: 11.5px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.3px;">
@@ -4581,5 +4581,78 @@
         <script src="assets/js/header-contact.js?v=4.0"></script>
         <script src="assets/js/cursor-3d.js?v=4.0"></script>
         <script src="assets/js/property-search.js?v=2.0"></script>
+
+        <!-- Dedicated Centered YouTube Video Modal (Zero Glitch, Perfect Center on Mobile & Desktop) -->
+        <div id="rvVideoModal" class="rv-video-modal-backdrop" aria-hidden="true" style="display: none;">
+            <div class="rv-video-modal-dialog">
+                <button type="button" class="rv-video-modal-close" id="rvVideoCloseBtn" aria-label="Close Video">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+                <div class="rv-video-modal-frame-wrap">
+                    <iframe id="rvVideoModalIframe" 
+                            src="" 
+                            title="Life at RealtyVault Video" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            (function() {
+                function openVideoModal(videoId) {
+                    const modal = document.getElementById('rvVideoModal');
+                    const iframe = document.getElementById('rvVideoModalIframe');
+                    if (!modal || !iframe) return;
+
+                    // Set YouTube Shorts embed URL with autoplay, playsinline
+                    iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+                    modal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+
+                    requestAnimationFrame(function() {
+                        modal.classList.add('is-active');
+                    });
+                }
+
+                function closeVideoModal() {
+                    const modal = document.getElementById('rvVideoModal');
+                    const iframe = document.getElementById('rvVideoModalIframe');
+                    if (!modal) return;
+
+                    modal.classList.remove('is-active');
+                    document.body.style.overflow = '';
+
+                    setTimeout(function() {
+                        modal.style.display = 'none';
+                        if (iframe) iframe.src = ''; // Instantly halts audio and video
+                    }, 250);
+                }
+
+                document.addEventListener('click', function(e) {
+                    const trigger = e.target.closest('.rv-video-modal-trigger');
+                    if (trigger) {
+                        e.preventDefault();
+                        const videoId = trigger.getAttribute('data-video-id');
+                        if (videoId) openVideoModal(videoId);
+                    }
+
+                    if (e.target.closest('#rvVideoCloseBtn')) {
+                        e.preventDefault();
+                        closeVideoModal();
+                    } else if (e.target.id === 'rvVideoModal') {
+                        closeVideoModal();
+                    }
+                });
+
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' || e.key === 'Esc') {
+                        closeVideoModal();
+                    }
+                });
+            })();
+        </script>
+
 </body>
     </html>
