@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Ensure hero & dialogue selects retain native dropdown functionality and perfect alignment
   if (window.jQuery && jQuery.fn.niceSelect) {
     try {
-      jQuery('.hero-select, .dialogue-select').niceSelect('destroy');
+      jQuery('.hero-select, .dialogue-select, .no-nice-select, .contact-field-select').niceSelect('destroy');
     } catch (e) {}
   }
 
