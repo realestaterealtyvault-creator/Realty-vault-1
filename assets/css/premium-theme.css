@@ -724,27 +724,40 @@ footer,
   padding-top: 50px;
 }
 
-/* Footer Logo */
-.footer-widget .footer-logo-wrap,
-.footer-widget .footer-logo-wrap > a,
+/* Footer Logo with clean White Background Badge */
+.footer-logo,
 .footer-widget .footer-logo,
-.footer-widget .footer-logo > a {
-  display: inline-flex !important;
-  align-items: center !important;
-  background: transparent !important;
-  background-color: transparent !important;
-  padding: 0 !important;
-  border: none !important;
-  border-radius: 0 !important;
-  margin-bottom: 14px !important;
-  box-shadow: none !important;
-  filter: none !important; /* Override style.css brightness(0) invert(1) */
+.footer-widget .footer-logo-wrap {
+  margin-bottom: 18px !important;
 }
 
+.footer-logo > a,
+.footer-widget .footer-logo > a,
+.footer-widget .footer-logo-wrap > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+  filter: none !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.footer-logo > a:hover,
+.footer-widget .footer-logo > a:hover,
+.footer-widget .footer-logo-wrap > a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22) !important;
+}
+
+.footer-logo img,
 .footer-widget .footer-logo img,
 .footer-widget .footer-logo-wrap img {
   filter: none !important;
-  max-width: 190px !important;
+  max-width: 175px !important;
   height: auto !important;
   display: block !important;
 }
